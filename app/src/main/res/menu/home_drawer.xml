@@ -2,36 +2,15 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <group android:id="@+id/one" android:checkableBehavior="single">
         <item
-                android:id="@+id/nav_library"
-                android:icon="@drawable/ic_menu_camera"
-                android:title="@string/music_library" />
+                android:id="@+id/nav_share"
+                android:icon="@drawable/ic_share_black_24dp"
+                android:title="@string/tell_the_friend" />
     </group>
     <group android:id="@+id/two" android:checkableBehavior="single">
         <item
-                android:id="@+id/nav_song"
-                android:icon="@drawable/ic_menu_gallery"
-                android:title="@string/music_songs" />
+                android:id="@+id/nav_report_bug"
+                android:icon="@drawable/ic_bug_report_black_24dp"
+                android:title="@string/report_bug" />
     </group>
-    <group android:id="@+id/three" android:checkableBehavior="single">
-        <item
-                android:id="@+id/nav_playlist"
-                android:icon="@drawable/ic_menu_slideshow"
-                android:title="@string/music_playlists" />
-    </group>
-    <item android:title="@string/remote_services">
-        <menu>
-            <item
-                    android:id="@+id/nav_sound_cound"
-                    android:icon="@drawable/ic_menu_camera"
-                    android:title="@string/sound_cloud" />
-        </menu>
-    </item>
-    <item android:title="@string/local_services">
-        <menu>
-            <item
-                    android:id="@+id/nav_raw_folder"
-                    android:icon="@drawable/ic_menu_camera"
-                    android:title="@string/app_raw_folder" />
-        </menu>
-    </item>
+
 </menu>

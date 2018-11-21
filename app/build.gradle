@@ -28,7 +28,7 @@ android {
     }
 }
 
-
+//https://github.com/firebase/quickstart-android/blob/c2f3ae5a111028cdfe86e53f5d59915f8ef0917e/auth/app/build.gradle
 dependencies {
     def lifecycle_version = "2.0.0"
     def room_version = "2.1.0-alpha02"
@@ -46,13 +46,19 @@ dependencies {
     //noinspection GradleCompatible
     implementation 'androidx.appcompat:appcompat:1.0.2'
     implementation 'androidx.constraintlayout:constraintlayout:2.0.0-alpha2'
+    implementation 'androidx.recyclerview:recyclerview:1.0.0'
+    implementation 'androidx.recyclerview:recyclerview:1.0.0'
+    implementation 'androidx.cardview:cardview:1.0.0'
     implementation 'com.google.android.material:material:1.1.0-alpha01'
 
     //firebase  dependencies
     implementation 'com.google.firebase:firebase-core:16.0.5'
-    //implementation 'com.google.firebase:firebase-auth:16.0.5'
-    implementation ("com.google.firebase:firebase-auth:16.0.5") { exclude group: 'com.google.guava', module: 'listenablefuture' }
-    //implementation 'com.google.android.gms:play-services-auth:16.0.5'
+    implementation 'com.google.firebase:firebase-auth:16.0.5'
+    /*implementation("com.google.firebase:firebase-auth:16.0.5") {
+        exclude group: 'com.google.guava', module: 'listenablefuture'
+    }*/
+    implementation 'com.google.android.gms:play-services-auth:16.0.1'
+
 
     implementation("android.arch.work:work-runtime:$work_version") {
         exclude group: 'com.google.guava', module: 'listenablefuture'
@@ -60,6 +66,8 @@ dependencies {
     //dagger dependencies
     implementation 'com.google.dagger:dagger-android:2.16'
     implementation 'com.google.dagger:dagger-android-support:2.16' // if you use the support libraries
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0-alpha1'
+    implementation 'androidx.lifecycle:lifecycle-extensions:2.0.0-alpha1'
     kapt 'com.google.dagger:dagger-android-processor:2.16'
 
     //testing dependencies
@@ -68,7 +76,7 @@ dependencies {
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.1.0'
 
     // Other dependencies
-   // implementation "android.arch.work:work-runtime:$work_version"
+    // implementation "android.arch.work:work-runtime:$work_version"
 
     // ViewModel and LiveData
     implementation "androidx.lifecycle:lifecycle-extensions:$lifecycle_version"
@@ -80,7 +88,14 @@ dependencies {
     // optional - Guava support for Room, including Optional and ListenableFuture
     implementation "androidx.room:room-guava:$room_version"
 
+    // glide image library
+    implementation 'com.github.bumptech.glide:glide:4.3.1'
+
     implementation 'com.android.support:multidex:1.0.3'
+
+    //rx implementation
+    implementation 'io.reactivex.rxjava2:rxandroid:2.1.0'
+    implementation 'io.reactivex.rxjava2:rxjava:2.2.0'
 
 }
 

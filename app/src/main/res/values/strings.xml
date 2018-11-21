@@ -3,4 +3,9 @@
     <string name="title_activity_register">RegisterActivity</string>
     <string name="title_activity_login">LoginActivity</string>
     <string name="title_activity_home">HomeActivity</string>
+    <string name="tell_the_friend">TELL THE FRIEND</string>
+
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="report_bug">REPORT A BUG</string>
+    <string name="title_activity_contact_detail">ContactDetailActivity</string>
 </resources>
