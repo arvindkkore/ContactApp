@@ -8,6 +8,7 @@
     <!--<color name="colorPrimaryDark">#6539ba</color>-->
     <color name="colorAccent">#FF4081</color>
     <color name="bgBottomNavigation">#fe485a</color>
-    <color name="colorPrimary">#1e90ff</color>
+  <!--  <color name="colorPrimary">#1e90ff</color>-->
+    <color name="colorPrimary">#87cefa</color>
     <color name="colorPrimaryDark">#87cefa</color>
 </resources>

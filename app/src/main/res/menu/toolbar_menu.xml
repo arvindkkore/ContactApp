@@ -5,8 +5,15 @@
 
     <item
             android:id="@+id/action_search"
-            android:icon="@android:drawable/ic_menu_search"
+            android:icon="@drawable/ic_search"
             app:showAsAction="always|collapseActionView"
             app:actionViewClass="androidx.appcompat.widget.SearchView"
             android:title="Search"/>
+    <item
+            android:id="@+id/call_log"
+            android:icon="@drawable/ic_call_white"
+            app:showAsAction="collapseActionView"
+            android:title="@string/menu_call_log"
+            />
+
 </menu>

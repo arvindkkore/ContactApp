@@ -1,13 +1,43 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+<androidx.cardview.widget.CardView
+        android:padding="5dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        xmlns:android="http://schemas.android.com/apk/res/android">
+<LinearLayout
+        android:padding="10dp"
+        xmlns:android="http://schemas.android.com/apk/res/android"
               android:orientation="vertical"
-              android:layout_width="match_parent"
+              android:layout_width="wrap_content"
               android:layout_height="wrap_content">
 
+    <FrameLayout
+            android:orientation="vertical"
+            android:layout_width="100dp"
+            android:layout_height="100dp">
+
+    <RelativeLayout android:layout_width="wrap_content"
+                 android:layout_height="wrap_content">
+        <ImageView
+                android:src="@drawable/face_left"
+                android:layout_width="100dp"
+                android:layout_height="100dp"/>
+        <ImageView
+                android:layout_alignParentRight="true"
+                android:layout_alignParentBottom="true"
+                android:src="@drawable/ic_phone_missed_black"
+                android:layout_width="30dp"
+                android:layout_height="30dp"/>
+    </RelativeLayout>
+
+
+    </FrameLayout>
     <TextView
             android:text="9713151639"
             android:padding="10dp"
-            android:id="@+id/call_log"
+            android:id="@+id/textview_number"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"/>
 </LinearLayout>
+</androidx.cardview.widget.CardView>

@@ -16,7 +16,7 @@ class ContactAdapter(val context: Context, val list: List<ContactDTO> ) : Recycl
     {
      val textView:TextView
     init {
-        textView =view.findViewById(R.id.call_log)
+        textView =view.findViewById(R.id.textview_number)
       }
     }
 

@@ -1,7 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
+<ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:tools="http://schemas.android.com/tools">
+<LinearLayout
+        android:orientation="vertical"
+
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         tools:context=".HomeFragment">
@@ -11,4 +16,39 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"/>
 
-</RelativeLayout>
+    <LinearLayout
+            android:layout_marginTop="5dp"
+            android:layout_width="match_parent"
+                  android:background="#555555"
+                  android:layout_height="wrap_content"
+                  android:orientation="horizontal">
+        <TextView android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:text="Heading 1"
+        />
+    </LinearLayout>
+    <androidx.recyclerview.widget.RecyclerView
+            android:layout_marginTop="5dp"
+            android:id="@+id/recycler_view_received"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+   <LinearLayout
+                 android:layout_marginTop="5dp"
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content"
+                 android:background="#555555"
+   android:orientation="horizontal">
+    <TextView android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:text="Heading 2"
+
+    />
+   </LinearLayout>
+    <androidx.recyclerview.widget.RecyclerView
+            android:layout_marginTop="5dp"
+            android:id="@+id/recycler_view_outgoing"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+</LinearLayout>
+</ScrollView>

@@ -21,7 +21,6 @@ class MainActivity : AppCompatActivity() {
         auth = FirebaseAuth.getInstance();
         Handler().postDelayed( {
             val currentUser = auth.currentUser
-            Log.e(TAG,"Current User ${auth.currentUser?.email}")
             if (currentUser == null)
             {
                 Log.e(TAG,"Login Page")
@@ -29,13 +28,12 @@ class MainActivity : AppCompatActivity() {
                 startActivity(intent)
             }else
             {
-                Log.e(TAG,"Home Page")
+
                 val intent =Intent(this@MainActivity,HomeActivity::class.java);
                 startActivity(intent)
-
             }
             finish()
-        },5000)
+        },3000)
 
 
 

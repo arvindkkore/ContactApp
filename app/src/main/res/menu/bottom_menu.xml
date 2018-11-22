@@ -4,15 +4,15 @@
     <item
             android:id="@+id/home"
             android:icon="@drawable/identification"
-            android:title="Home1" />
+            android:title="Home" />
 
     <item
             android:id="@+id/home1"
             android:icon="@drawable/ic_home_white"
-            android:title="Home2" />
+            android:title="Contact" />
 
     <item
             android:id="@+id/home2"
             android:icon="@drawable/ic_call_white"
-            android:title="Home3" />
+            android:title="Call" />
 </menu>

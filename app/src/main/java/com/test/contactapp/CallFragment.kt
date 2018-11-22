@@ -121,6 +121,7 @@ return sb.toString()
 
         val sb = StringBuilder()
 
+        val name = managedCursor.getColumnIndex(CallLog.Calls.CACHED_NAME)
         val number = managedCursor.getColumnIndex(CallLog.Calls.NUMBER)
         val type = managedCursor.getColumnIndex(CallLog.Calls.TYPE)
         val date = managedCursor.getColumnIndex(CallLog.Calls.DATE)
@@ -134,6 +135,8 @@ return sb.toString()
 
         while (managedCursor.moveToNext()) {
             val callModel:CallModel = CallModel()
+            val phName = managedCursor.getString(name)
+            callModel.contactName=phName
             val phNumber = managedCursor.getString(number)
             callModel.contactNumber=phNumber
             val callType = managedCursor.getString(type)
