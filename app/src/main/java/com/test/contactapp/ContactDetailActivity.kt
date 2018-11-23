@@ -12,7 +12,10 @@ class ContactDetailActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_contact_detail)
         setSupportActionBar(toolbar)
-
+        val actionBar =supportActionBar
+        actionBar?.apply {
+            setDisplayHomeAsUpEnabled(true)
+        }
 
     }
 

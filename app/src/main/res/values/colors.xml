@@ -11,4 +11,5 @@
   <!--  <color name="colorPrimary">#1e90ff</color>-->
     <color name="colorPrimary">#87cefa</color>
     <color name="colorPrimaryDark">#87cefa</color>
+ <color name="white">#FFFFFF</color>
 </resources>

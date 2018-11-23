@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+        android:id="@+id/speaker_avatar_container"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_gravity="center_vertical"
+        xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <TextView
+            android:id="@+id/placeholder"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:gravity="center"
+            android:background="@drawable/circle"
+            android:textColor="@color/white"/>
+
+    <ImageView
+            android:id="@+id/avatar"
+            android:layout_width="40dp"
+            android:layout_height="40dp" />
+</FrameLayout>

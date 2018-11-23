@@ -28,6 +28,7 @@ import android.content.Context.SEARCH_SERVICE
 import androidx.core.content.ContextCompat.getSystemService
 import android.app.SearchManager
 import android.content.Context
+import android.content.Intent
 import android.view.Menu
 import android.view.MenuInflater
 import androidx.appcompat.widget.SearchView
@@ -84,15 +85,7 @@ class HomeActivity : AppCompatActivity() {
 
     }
 
-    override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        return when (item.itemId) {
-            android.R.id.home -> {
-                mDrawerLayout?.openDrawer(GravityCompat.START)
-                true
-            }
-            else -> super.onOptionsItemSelected(item)
-        }
-    }
+
 
     private val mOnNavigationItemSelectedListener = object : BottomNavigationView.OnNavigationItemSelectedListener {
 
@@ -113,7 +106,7 @@ class HomeActivity : AppCompatActivity() {
                 }
                 R.id.home2 -> {
                      toolbar.setTitle("Home 3")
-                    fragment = CallFragment()
+                    fragment = CallFragmentNew()
                     loadFragment(fragment)
                     return true
                 }
@@ -149,5 +142,21 @@ class HomeActivity : AppCompatActivity() {
         }
         return super.onCreateOptionsMenu(menu)
     }
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        return when (item.itemId) {
+            android.R.id.home -> {
+                mDrawerLayout?.openDrawer(GravityCompat.START)
+                true
+            }
+            R.id.call_log -> {
+                val intent =Intent(this@HomeActivity,ContactDetailActivity::class.java)
+                startActivity(intent)
+                true
+            }
+            else -> super.onOptionsItemSelected(item)
+        }
+    }
+
+
 }
 
