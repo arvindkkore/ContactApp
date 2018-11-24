@@ -48,7 +48,8 @@
             android:layout_height="match_parent"
             android:layout_gravity="start"
             app:headerLayout="@layout/header_layout"
-            android:theme="@style/Widget.NavigationView"
             app:menu="@menu/home_drawer"
+            app:itemBackground="@android:color/transparent"
+            app:itemTextAppearance="@style/NavigationDrawerStyle"
             android:fitsSystemWindows="true"/>
     </androidx.drawerlayout.widget.DrawerLayout>

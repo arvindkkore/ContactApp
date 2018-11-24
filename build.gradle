@@ -27,3 +27,33 @@ allprojects {
 task clean(type: Delete) {
     delete rootProject.buildDir
 }
+ext {
+    compileSdk                  = 28
+    applicationId               = "com.test.contactapp"
+    minSdk                      = 15
+    targetSdk                   = 28
+    versionCode                 = 1
+    versionName                 = "1.0"
+    multiDexEnabled             = true
+
+    //architecture version
+    lifecycle_version           = "2.0.0"
+    room_version                = "2.1.0-alpha02"
+    work_version                = "1.0.0-alpha11"
+
+   //kotlin
+    kotlin_coroutine            = "1.0.1"
+
+   // support libraries
+    appcompat                   = "1.0.2"
+    constraintlayout            = "2.0.0-alpha2"
+    recyclerview                = "1.0.0"
+    cardview                    = "1.0.0"
+    material                    = "1.1.0-alpha01"
+    firebase                    = "16.0.5"
+    play_services_auth          = "16.0.1"
+
+    //dagger
+    dagger                      = "2.16"
+
+}

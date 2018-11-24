@@ -9,7 +9,8 @@
     <color name="colorAccent">#FF4081</color>
     <color name="bgBottomNavigation">#fe485a</color>
   <!--  <color name="colorPrimary">#1e90ff</color>-->
-    <color name="colorPrimary">#87cefa</color>
-    <color name="colorPrimaryDark">#87cefa</color>
+    <color name="colorPrimary">#4952e0</color>
+    <color name="colorPrimaryDark">#4952e0</color>
  <color name="white">#FFFFFF</color>
+    <color name="devider">#1a8aed</color>
 </resources>

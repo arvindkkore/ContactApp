@@ -6,16 +6,16 @@ apply plugin: 'kotlin-android-extensions'
 
 apply plugin: "androidx.navigation.safeargs"
 
-
+def proj =rootProject.ext
 android {
-    compileSdkVersion 28
+    compileSdkVersion proj.compileSdk
     defaultConfig {
-        applicationId "com.test.contactapp"
-        minSdkVersion 15
-        targetSdkVersion 28
-        versionCode 1
-        versionName "1.0"
-        multiDexEnabled true
+        applicationId proj.applicationId
+        minSdkVersion proj.minSdk
+        targetSdkVersion proj.targetSdk
+        versionCode proj.versionCode
+        versionName proj.versionName
+        multiDexEnabled proj.multiDexEnabled
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
 
@@ -38,8 +38,8 @@ dependencies {
 
     // kotlin dependencies
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
-    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-core:1.0.1'
-    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-android:1.0.1'
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-core:${proj.kotlin_coroutine}"
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-android:${proj.kotlin_coroutine}"
 
     // support library
     //noinspection GradleCompatible

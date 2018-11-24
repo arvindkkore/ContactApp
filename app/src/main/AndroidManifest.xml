@@ -15,7 +15,7 @@
             android:supportsRtl="true"
             android:theme="@style/AppTheme">
         <activity
-                android:name=".MainActivity"
+                android:name="com.test.contactapp.persenter.view.MainActivity"
                 android:theme="@style/Theme.AppCompat.Light.NoActionBar.FullScreen" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
@@ -23,17 +23,17 @@
             </intent-filter>
         </activity>
         <activity
-                android:name=".RegisterActivity"
+                android:name="com.test.contactapp.persenter.view.RegisterActivity"
                 android:label="@string/title_activity_register"
                 android:theme="@style/AppTheme.NoActionBar">
         </activity>
         <activity
-                android:name=".LoginActivity"
+                android:name="com.test.contactapp.persenter.view.LoginActivity"
                 android:label="@string/title_activity_login"
                 android:theme="@style/AppTheme.NoActionBar">
         </activity>
         <activity
-                android:name=".HomeActivity"
+                android:name="com.test.contactapp.persenter.view.HomeActivity"
                 android:label="@string/title_activity_home"
                 android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
@@ -48,7 +48,7 @@
                 android:resource="@array/preloaded_fonts"/>
 
         <activity
-                android:name=".ContactDetailActivity"
+                android:name="com.test.contactapp.persenter.view.ContactDetailActivity"
                 android:label="@string/title_activity_contact_detail"
                 android:theme="@style/AppTheme.NoActionBar">
         </activity>
