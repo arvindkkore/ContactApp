@@ -12,4 +12,7 @@
     <string name="tab_about">About</string>
     <string name="tab_links">Links</string>
     <string name="tab_note">Note</string>
+    <string name="tab_call">Call</string>
+    <string name="tab_contact">Contact</string>
+    <string name="tab_home">Home</string>
 </resources>

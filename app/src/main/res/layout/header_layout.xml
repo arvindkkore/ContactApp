@@ -4,19 +4,20 @@
               android:background="@color/colorPrimary"
               android:layout_width="match_parent"
               android:layout_height="200dp">
-    <ImageView android:layout_width="120dp"
+    <ImageView android:layout_width="90dp"
                android:id="@+id/profile_image"
                android:src="@drawable/img_avatar"
                android:layout_marginTop="20dp"
-               android:layout_gravity="center_horizontal"
-               android:layout_height="120dp"/>
+               android:layout_gravity="left"
+               android:layout_marginLeft="20dp"
+               android:layout_height="90dp"/>
     <TextView
             android:id="@+id/user_name"
             android:textColor="#FFF"
             android:layout_marginTop="10dp"
-            android:layout_gravity="center_horizontal"
             android:text="Arvind Kore"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
             app:fontFamily="@font/aclonica"/>
 </LinearLayout>

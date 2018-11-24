@@ -1,37 +1,33 @@
 package com.test.contactapp.persenter.view
 
+
+import android.app.SearchManager
+import android.content.Context
+import android.content.Intent
 import android.os.Bundle
 import android.util.Log
+import android.view.Menu
 import android.view.MenuItem
 import android.widget.ImageView
 import android.widget.TextView
-
 import androidx.annotation.NonNull
 import androidx.appcompat.app.ActionBar
-
-
 import androidx.appcompat.app.AppCompatActivity
+import androidx.appcompat.widget.SearchView
 import androidx.core.view.GravityCompat
 import androidx.drawerlayout.widget.DrawerLayout
 import androidx.fragment.app.Fragment
 import com.bumptech.glide.Glide
 import com.bumptech.glide.request.RequestOptions
-
-import kotlinx.android.synthetic.main.activity_home.*
-
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.google.firebase.auth.FirebaseAuth
-import android.app.SearchManager
-import android.content.Context
-import android.content.Intent
-import android.view.Menu
-import androidx.appcompat.widget.SearchView
 import com.test.contactapp.R
 import com.test.contactapp.persenter.view.fragments.CallFragmentNew
 import com.test.contactapp.persenter.view.fragments.ContactFragmentNew
 import com.test.contactapp.persenter.view.fragments.HomeFragment
+import kotlinx.android.synthetic.main.activity_home.*
 
-
+//https://guides.codepath.com/android/viewpager-with-fragmentpageradapter
 class HomeActivity : AppCompatActivity() {
 
     lateinit var imageView: ImageView
@@ -39,7 +35,8 @@ class HomeActivity : AppCompatActivity() {
     companion object {
         val TAG = "HomeActivity"
     }
-    lateinit var auth:FirebaseAuth
+
+    lateinit var auth: FirebaseAuth
     private var mDrawerLayout: DrawerLayout? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -51,14 +48,17 @@ class HomeActivity : AppCompatActivity() {
         val navigation = findViewById(R.id.bottom_navigation) as BottomNavigationView
         navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener)
 
+
         loadFragment(HomeFragment())
         toolbar.title = "Home 1"
-        val user =auth.currentUser
-        Log.e(TAG," user detail ${user?.email}")
-        Glide.with(this).load(user?.photoUrl).apply(RequestOptions().circleCrop()).into(nav_view.getHeaderView(0).findViewById(
-            R.id.profile_image
-        ))
-        nav_view.getHeaderView(0).findViewById<TextView>(R.id.user_name).text =user?.displayName
+        val user = auth.currentUser
+        Log.e(TAG, " user detail ${user?.email}")
+        Glide.with(this).load(user?.photoUrl).apply(RequestOptions().circleCrop()).into(
+            nav_view.getHeaderView(0).findViewById(
+                R.id.profile_image
+            )
+        )
+        nav_view.getHeaderView(0).findViewById<TextView>(R.id.user_name).text = user?.displayName
 
         mDrawerLayout = findViewById(R.id.drawer_layout)
 
@@ -86,26 +86,25 @@ class HomeActivity : AppCompatActivity() {
     }
 
 
-
     private val mOnNavigationItemSelectedListener = object : BottomNavigationView.OnNavigationItemSelectedListener {
 
         override fun onNavigationItemSelected(@NonNull item: MenuItem): Boolean {
             val fragment: Fragment
             when (item.getItemId()) {
                 R.id.home -> {
-                     toolbar.setTitle("Home 1")
+                    toolbar.title = getString(R.string.tab_home)
                     fragment = HomeFragment()
                     loadFragment(fragment)
                     return true
                 }
-                R.id.home1 -> {
-                     toolbar.setTitle("Home 2")
+                R.id.contact -> {
+                    toolbar.title = getString(R.string.tab_contact)
                     fragment = ContactFragmentNew()
                     loadFragment(fragment)
                     return true
                 }
-                R.id.home2 -> {
-                     toolbar.setTitle("Home 3")
+                R.id.call -> {
+                    toolbar.title = getString(R.string.tab_call)
                     fragment = CallFragmentNew()
                     loadFragment(fragment)
                     return true
@@ -142,6 +141,7 @@ class HomeActivity : AppCompatActivity() {
         }
         return super.onCreateOptionsMenu(menu)
     }
+
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         return when (item.itemId) {
             android.R.id.home -> {
@@ -149,7 +149,7 @@ class HomeActivity : AppCompatActivity() {
                 true
             }
             R.id.call_log -> {
-                val intent =Intent(this@HomeActivity, ContactDetailActivity::class.java)
+                val intent = Intent(this@HomeActivity, ContactDetailActivity::class.java)
                 startActivity(intent)
                 true
             }

@@ -6,12 +6,29 @@
         xmlns:tools="http://schemas.android.com/tools">
 <LinearLayout
         android:orientation="vertical"
-
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
         tools:context=".persenter.view.fragments.HomeFragment">
 
+    <LinearLayout
+
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+        <TextView
+                  android:textSize="14dp"
+                  android:fontFamily="@font/aclonica"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:text="Missed Call"
+        />
+    </LinearLayout>
+
     <androidx.recyclerview.widget.RecyclerView
+            android:layout_marginTop="10dp"
             android:id="@+id/recycler_view_home"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"/>
@@ -19,16 +36,19 @@
     <LinearLayout
             android:layout_marginTop="5dp"
             android:layout_width="match_parent"
-                  android:background="#555555"
+            android:textSize="14dp"
+            android:fontFamily="@font/aclonica"
                   android:layout_height="wrap_content"
                   android:orientation="horizontal">
         <TextView android:layout_width="wrap_content"
                   android:layout_height="wrap_content"
-                  android:text="Heading 1"
+                  android:text="Incoming Call"
+                  android:textSize="14dp"
+                  android:fontFamily="@font/aclonica"
         />
     </LinearLayout>
     <androidx.recyclerview.widget.RecyclerView
-            android:layout_marginTop="5dp"
+            android:layout_marginTop="10dp"
             android:id="@+id/recycler_view_received"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"/>
@@ -36,16 +56,16 @@
                  android:layout_marginTop="5dp"
                  android:layout_width="match_parent"
                  android:layout_height="wrap_content"
-                 android:background="#555555"
    android:orientation="horizontal">
     <TextView android:layout_width="wrap_content"
               android:layout_height="wrap_content"
-              android:text="Heading 2"
-
+              android:text="Outgoing Call"
+              android:textSize="14dp"
+              android:fontFamily="@font/aclonica"
     />
    </LinearLayout>
     <androidx.recyclerview.widget.RecyclerView
-            android:layout_marginTop="5dp"
+            android:layout_marginTop="10dp"
             android:id="@+id/recycler_view_outgoing"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"/>

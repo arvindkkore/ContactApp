@@ -13,4 +13,7 @@
     <color name="colorPrimaryDark">#4952e0</color>
  <color name="white">#FFFFFF</color>
     <color name="devider">#1a8aed</color>
+    <color name="dest">#d7dbdd </color>
+    <color name="red">#AA0000</color>
+    <color name="green">#00AA00</color>
 </resources>

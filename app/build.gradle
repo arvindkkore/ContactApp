@@ -26,6 +26,9 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
+    androidExtensions {
+        experimental = true
+    }
 }
 
 //https://github.com/firebase/quickstart-android/blob/c2f3ae5a111028cdfe86e53f5d59915f8ef0917e/auth/app/build.gradle

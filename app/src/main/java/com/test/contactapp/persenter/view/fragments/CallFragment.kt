@@ -156,38 +156,9 @@ return sb.toString()
                 CallLog.Calls.MISSED_TYPE -> callModel.type = "Missed"
             }
 
-           /* sb.append("<tr>")
-                .append("<td>Phone Number: </td>")
-                .append("<td><strong>")
-                .append(phNumber)
-                .append("</strong></td>")
-            sb.append("</tr>")
-            sb.append("<br/>")
-            sb.append("<tr>")
-                .append("<td>Call Type:</td>")
-                .append("<td><strong>")
-                .append(dir)
-                .append("</strong></td>")
-            sb.append("</tr>")
-            sb.append("<br/>")
-            sb.append("<tr>")
-                .append("<td>Date & Time:</td>")
-                .append("<td><strong>")
-                .append(callDayTime)
-                .append("</strong></td>")
-            sb.append("</tr>")
-            sb.append("<br/>")
-            sb.append("<tr>")
-                .append("<td>Call Duration (Seconds):</td>")
-                .append("<td><strong>")
-                .append(callDuration)
-                .append("</strong></td>")
-            sb.append("</tr>")
-            sb.append("<br/>")
-            sb.append("<br/>")*/
+
             list.add(callModel)
         }
-       // sb.append("</table>")
 
         managedCursor.close()
 

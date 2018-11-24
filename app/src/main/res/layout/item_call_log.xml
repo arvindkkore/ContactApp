@@ -13,31 +13,35 @@
               android:layout_height="wrap_content">
 
     <FrameLayout
+            android:layout_gravity="center_horizontal"
             android:orientation="vertical"
-            android:layout_width="100dp"
-            android:layout_height="100dp">
+            android:layout_width="70dp"
+            android:layout_height="70dp">
 
     <RelativeLayout android:layout_width="wrap_content"
                  android:layout_height="wrap_content">
         <ImageView
                 android:src="@drawable/face_left"
-                android:layout_width="100dp"
-                android:layout_height="100dp"/>
+                android:layout_width="70dp"
+                android:layout_height="70dp"/>
         <ImageView
+                android:id="@+id/image_call_type"
+                android:tint="@color/red"
                 android:layout_alignParentRight="true"
                 android:layout_alignParentBottom="true"
                 android:src="@drawable/ic_phone_missed_black"
-                android:layout_width="30dp"
-                android:layout_height="30dp"/>
+                android:layout_width="20dp"
+                android:layout_height="20dp"/>
     </RelativeLayout>
 
 
     </FrameLayout>
     <TextView
+            android:layout_gravity="center_horizontal"
             android:text="9713151639"
             android:padding="10dp"
             android:id="@+id/textview_number"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"/>
 </LinearLayout>
 </androidx.cardview.widget.CardView>
