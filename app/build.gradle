@@ -21,7 +21,9 @@ android {
         multiDexEnabled proj.multiDexEnabled
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
-
+        kapt {
+            generateStubs = true
+        }
     }
     buildTypes {
         release {
@@ -32,9 +34,7 @@ android {
     androidExtensions {
         experimental = true
     }
-    kapt {
-        generateStubs = true
-    }
+
 }
 
 //https://github.com/firebase/quickstart-android/blob/c2f3ae5a111028cdfe86e53f5d59915f8ef0917e/auth/app/build.gradle
