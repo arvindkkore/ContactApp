@@ -17,7 +17,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.test.contactapp.R
 import com.test.contactapp.data.models.CallModel
-import com.test.contactapp.persenter.view.HomeViewModel
+import com.test.contactapp.persenter.view.viewmodel.HomeViewModel
 import com.test.contactapp.persenter.adapter.MadeCallAdapter
 import com.test.contactapp.persenter.adapter.MissedCallAdapter
 import com.test.contactapp.persenter.adapter.RecievedCallAdapter
@@ -72,7 +72,7 @@ class HomeFragment : Fragment(),LoaderManager.LoaderCallbacks<Cursor> {
         super.onActivityCreated(savedInstanceState)
         viewModel = ViewModelProviders.of(this).get(HomeViewModel::class.java)
         loaderManager.initLoader(CallFragment.URL_LOADER, null, this@HomeFragment);
-        loaderManager.initLoader(CallFragment.URL_LOADER, null, this@HomeFragment);
+
 
     }
 
@@ -96,7 +96,6 @@ class HomeFragment : Fragment(),LoaderManager.LoaderCallbacks<Cursor> {
     override fun onLoadFinished(loader: Loader<Cursor>, managedCursor: Cursor) {
         Log.d(CallFragment.TAG, "onLoadFinished()")
 
-        val sb = StringBuilder()
 
         val name = managedCursor.getColumnIndex(CallLog.Calls.CACHED_NAME)
         val number = managedCursor.getColumnIndex(CallLog.Calls.NUMBER)

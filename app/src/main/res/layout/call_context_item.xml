@@ -2,18 +2,18 @@
 <androidx.constraintlayout.widget.ConstraintLayout
         xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools"
-        android:layout_width="300dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        tools:context=".persenter.view.MainActivity"
+        tools:context=".persenter.view.activity.MainActivity"
         android:padding="5dp">
 
 
     <TextView
             android:fontFamily="@font/aclonica"
             android:text="Office"
-            android:layout_width="292dp"
+            android:layout_width="wrap_content"
             android:layout_height="21dp"
-            android:id="@+id/textView3"
+            android:id="@+id/textview_type"
             app:layout_constraintTop_toTopOf="@+id/guideline9" app:layout_constraintStart_toStartOf="@+id/guideline7"
             android:layout_marginTop="4dp" app:layout_constraintEnd_toStartOf="@+id/imageView3"
             android:layout_marginEnd="8dp" android:layout_marginRight="8dp"
@@ -21,22 +21,24 @@
     <TextView
             android:fontFamily="@font/aclonica"
             android:text="9713151639"
-            android:layout_width="293dp"
+            android:layout_width="wrap_content"
             android:layout_height="18dp"
-            android:id="@+id/textView4"
+            android:id="@+id/textview_phone"
             app:layout_constraintStart_toStartOf="@+id/guideline7"
-            app:layout_constraintTop_toBottomOf="@+id/textView3" app:layout_constraintEnd_toStartOf="@+id/imageView3"
+            app:layout_constraintTop_toBottomOf="@+id/textview_type" app:layout_constraintEnd_toStartOf="@+id/imageView3"
             android:layout_marginEnd="8dp" android:layout_marginRight="8dp" app:layout_constraintHorizontal_bias="0.0"/>
     <ImageView
+
+            android:background="@drawable/round_bg"
             android:layout_width="20dp"
             android:layout_height="20dp"
-            android:src="@drawable/ic_phone_missed_black"
-
+            android:padding="5dp"
+            android:src="@drawable/ic_call_green"
             android:id="@+id/imageView3"
             app:layout_constraintTop_toTopOf="@+id/guideline9" android:layout_marginTop="8dp"
             app:layout_constraintEnd_toStartOf="@+id/guideline8" android:layout_marginEnd="8dp"
             android:layout_marginRight="8dp" android:layout_marginBottom="8dp"
-            app:layout_constraintBottom_toBottomOf="@+id/textView4"/>
+            app:layout_constraintBottom_toBottomOf="@+id/textview_phone"/>
     <androidx.constraintlayout.widget.Guideline
             android:orientation="vertical"
             android:layout_width="wrap_content"

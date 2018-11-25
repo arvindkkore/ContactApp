@@ -1,4 +1,4 @@
-package com.test.contactapp.persenter.view
+package com.test.contactapp.persenter.view.activity
 
 import android.content.Intent
 import android.os.Bundle

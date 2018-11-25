@@ -17,7 +17,7 @@
     <style name="Widget.BottomNavigationView" parent="Widget.Design.BottomNavigationView">
         <item name="fontFamily">@font/aclonica</item>
     </style>
-   <!-- <style name="Widget.NavigationView" parent="Widget.Design.NavigationView">
+    <!-- <style name="Widget.NavigationView" parent="Widget.Design.NavigationView">
         <item name="fontFamily">@font/aclonica</item>
     </style>-->
     <style name="NavigationDrawerStyle">

@@ -9,31 +9,33 @@
     <uses-permission android:name="android.permission.WRITE_CONTACTS"/>
 
     <application
+            android:name=".ContactApp"
             android:allowBackup="true"
             android:icon="@mipmap/add_contacts"
             android:label="@string/app_name"
             android:supportsRtl="true"
             android:theme="@style/AppTheme">
         <activity
-                android:name="com.test.contactapp.persenter.view.MainActivity"
-                android:theme="@style/Theme.AppCompat.Light.NoActionBar.FullScreen" >
+                android:name=".persenter.view.activity.MainActivity"
+                android:theme="@style/Theme.AppCompat.Light.NoActionBar.FullScreen">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
+
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
         <activity
-                android:name="com.test.contactapp.persenter.view.RegisterActivity"
+                android:name=".persenter.view.activity.RegisterActivity"
                 android:label="@string/title_activity_register"
                 android:theme="@style/AppTheme.NoActionBar">
         </activity>
         <activity
-                android:name="com.test.contactapp.persenter.view.LoginActivity"
+                android:name=".persenter.view.activity.LoginActivity"
                 android:label="@string/title_activity_login"
                 android:theme="@style/AppTheme.NoActionBar">
         </activity>
         <activity
-                android:name="com.test.contactapp.persenter.view.HomeActivity"
+                android:name=".persenter.view.activity.HomeActivity"
                 android:label="@string/title_activity_home"
                 android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
@@ -48,8 +50,13 @@
                 android:resource="@array/preloaded_fonts"/>
 
         <activity
-                android:name="com.test.contactapp.persenter.view.ContactDetailActivity"
+                android:name=".persenter.view.activity.ContactDetailActivity"
                 android:label="@string/title_activity_contact_detail"
+                android:theme="@style/AppTheme.NoActionBar">
+        </activity>
+        <activity
+                android:name=".persenter.view.activity.CallLogActivity"
+                android:label="@string/title_activity_call_log"
                 android:theme="@style/AppTheme.NoActionBar">
         </activity>
     </application>

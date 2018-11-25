@@ -17,9 +17,9 @@ import androidx.loader.app.LoaderManager
 import androidx.loader.content.CursorLoader
 import androidx.loader.content.Loader
 import com.test.contactapp.R
-import com.test.contactapp.persenter.view.ContactViewModel
+import com.test.contactapp.persenter.view.viewmodel.ContactViewModel
 
-
+@Deprecated(message ="ContactFragment is used instead")
 class ContactFragment : Fragment(), LoaderManager.LoaderCallbacks<Cursor>
 {
 

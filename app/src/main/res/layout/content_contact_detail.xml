@@ -7,7 +7,7 @@
         android:layout_height="match_parent"
         app:layout_behavior="@string/appbar_scrolling_view_behavior"
         tools:showIn="@layout/activity_contact_detail"
-        tools:context=".persenter.view.ContactDetailActivity">
+        tools:context=".persenter.view.activity.ContactDetailActivity">
     <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:background="@color/colorPrimary"

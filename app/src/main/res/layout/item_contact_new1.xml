@@ -27,7 +27,7 @@
         />
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/textview_name"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
@@ -37,25 +37,25 @@
         android:layout_marginRight="8dp"
         android:layout_marginBottom="8dp"
         app:layout_constraintBottom_toBottomOf="@+id/user_img"
-        app:layout_constraintEnd_toStartOf="@+id/imageView"
+        app:layout_constraintEnd_toStartOf="@+id/imageview_phone"
         app:layout_constraintStart_toEndOf="@+id/user_img"
         app:layout_constraintTop_toTopOf="@+id/guideline2" />
 
-    <android.support.constraint.Guideline
+    <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
         app:layout_constraintGuide_begin="19dp" />
 
-    <android.support.constraint.Guideline
+    <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         app:layout_constraintGuide_begin="16dp" />
 
-    <android.support.constraint.Guideline
+    <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -63,16 +63,18 @@
         app:layout_constraintGuide_end="16dp" />
 
     <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="20dp"
-        android:layout_height="20dp"
+        android:id="@+id/imageview_phone"
+        android:layout_width="25dp"
+        android:padding="4dp"
+        android:layout_height="25dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
-        app:layout_constraintBottom_toBottomOf="@+id/textView"
+        app:layout_constraintBottom_toBottomOf="@+id/textview_name"
         app:layout_constraintTop_toTopOf="@+id/guideline2"
         app:layout_constraintEnd_toEndOf="@+id/guideline3"
-        app:srcCompat="@drawable/ic_call_made" />
+        android:src="@drawable/ic_call_green"
+        android:background="@drawable/round_bg" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
 

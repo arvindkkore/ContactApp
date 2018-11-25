@@ -15,6 +15,7 @@ import com.test.contactapp.data.models.CallModel
 
 import android.widget.AdapterView
 import androidx.appcompat.widget.ListPopupWindow
+import com.test.contactapp.data.models.Phone
 
 
 class CallListAdapter(val context: Context,val list:List<CallModel>) : RecyclerView.Adapter<CallListAdapter.ViewHolder>() {
@@ -59,10 +60,10 @@ class CallListAdapter(val context: Context,val list:List<CallModel>) : RecyclerV
      * If you set popup width = WRAP_CONTENT, popup width will equals ANCHOR width
      */
     private fun showListPopupWindow(anchor: View) {
-        val listPopupItems = ArrayList<String>()
-        listPopupItems.add("Menu 1")
-        listPopupItems.add("Menu 2")
-        listPopupItems.add("Menu 3")
+        val listPopupItems = ArrayList<Phone>()
+        listPopupItems.add(Phone("+919713151639","Personal"))
+        listPopupItems.add(Phone("+916263239374","Work"))
+        listPopupItems.add(Phone("+919754747759","Home"))
 
         val listPopupWindow = createListPopupWindow(anchor, ViewGroup.LayoutParams.MATCH_PARENT, listPopupItems)
         listPopupWindow.setOnItemClickListener(AdapterView.OnItemClickListener { parent, view, position, id ->
@@ -75,7 +76,7 @@ class CallListAdapter(val context: Context,val list:List<CallModel>) : RecyclerV
 
     private fun createListPopupWindow(
         anchor: View, width: Int,
-        items: List<String>
+        items: List<Phone>
     ): ListPopupWindow {
         val popup = ListPopupWindow(context)
         val adapter = ListPopupWindowAdapter(items)

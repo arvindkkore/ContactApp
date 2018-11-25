@@ -4,14 +4,17 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
+import android.widget.ImageView;
+import android.widget.TextView;
 import com.test.contactapp.R;
+import com.test.contactapp.data.models.Phone;
 
 import java.util.List;
 
 public class ListPopupWindowAdapter extends BaseAdapter {
-    private List<String> items;
+    private List<Phone> items;
 
-    public ListPopupWindowAdapter(List<String> items) {
+    public ListPopupWindowAdapter(List<Phone> items) {
         this.items = items;
     }
 
@@ -21,7 +24,7 @@ public class ListPopupWindowAdapter extends BaseAdapter {
     }
 
     @Override
-    public String getItem(int i) {
+    public Phone getItem(int i) {
         return items.get(i);
     }
 
@@ -41,18 +44,20 @@ public class ListPopupWindowAdapter extends BaseAdapter {
             holder = (ViewHolder) convertView.getTag();
         }
 
-        /*holder.tvTitle.setText(getItem(position).getTitle());
-        holder.ivImage.setImageResource(getItem(position).getImageRes());*/
+        holder.textview_phone.setText(getItem(position).getPhoneNumber());
+        holder.textview_type.setText(getItem(position).getNumberType());
         return convertView;
     }
 
     static class ViewHolder {
-      /*  TextView tvTitle;
-        ImageView ivImage;*/
+        TextView textview_phone;
+        TextView textview_type;
+
 
         ViewHolder(View view) {
-         /*   tvTitle = view.findViewById(R.id.text);
-            ivImage = view.findViewById(R.id.image);*/
+            textview_phone = view.findViewById(R.id.textview_phone);
+            textview_type = view.findViewById(R.id.textview_type);
+
         }
     }
 }

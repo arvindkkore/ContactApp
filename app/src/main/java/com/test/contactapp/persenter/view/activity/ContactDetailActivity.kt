@@ -1,13 +1,11 @@
-package com.test.contactapp.persenter.view
+package com.test.contactapp.persenter.view.activity
 
 import android.content.Context
 import android.os.Bundle
-import android.widget.TabHost
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.FragmentPagerAdapter
-import androidx.viewpager.widget.ViewPager
 import com.test.contactapp.R
 import com.test.contactapp.persenter.view.fragments.AboutFragment
 import com.test.contactapp.persenter.view.fragments.LinkFragment
@@ -17,7 +15,6 @@ import kotlinx.android.synthetic.main.activity_contact_detail.*
 import kotlinx.android.synthetic.main.content_contact_detail.*
 import android.widget.Toast
 import androidx.viewpager.widget.ViewPager.OnPageChangeListener
-import com.google.android.material.tabs.TabLayout
 
 //https://guides.codepath.com/android/viewpager-with-fragmentpageradapter
 class ContactDetailActivity : AppCompatActivity() {
@@ -33,7 +30,10 @@ class ContactDetailActivity : AppCompatActivity() {
             setDisplayHomeAsUpEnabled(true)
         }
 
-        adapterViewPager =  MyPagerAdapter(this@ContactDetailActivity,supportFragmentManager);
+        adapterViewPager = MyPagerAdapter(
+            this@ContactDetailActivity,
+            supportFragmentManager
+        );
         container.setAdapter(adapterViewPager);
 
 

@@ -1,4 +1,4 @@
-package com.test.contactapp.persenter.view
+package com.test.contactapp.persenter.view.activity
 
 
 import android.app.SearchManager
@@ -149,7 +149,7 @@ class HomeActivity : AppCompatActivity() {
                 true
             }
             R.id.call_log -> {
-                val intent = Intent(this@HomeActivity, ContactDetailActivity::class.java)
+                val intent = Intent(this@HomeActivity, CallLogActivity::class.java)
                 startActivity(intent)
                 true
             }

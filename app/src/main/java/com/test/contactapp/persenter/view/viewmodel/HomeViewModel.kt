@@ -1,4 +1,4 @@
-package com.test.contactapp.persenter.view
+package com.test.contactapp.persenter.view.viewmodel
 
 import androidx.lifecycle.ViewModel;
 
