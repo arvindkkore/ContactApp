@@ -1,7 +1,6 @@
-package com.test.contactapp.persenter.view.fragments
+package com.test.contactapp.persenter.view.ui.fragments
 
 import android.content.Context
-import android.net.Uri
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -18,17 +17,16 @@ private const val ARG_PARAM2 = "param2"
 /**
  * A simple [Fragment] subclass.
  * Activities that contain this fragment must implement the
- * [LinkFragment.OnFragmentInteractionListener] interface
+ * [AboutFragment.OnFragmentInteractionListener] interface
  * to handle interaction events.
- * Use the [LinkFragment.newInstance] factory method to
+ * Use the [AboutFragment.newInstance] factory method to
  * create an instance of this fragment.
  *
  */
-class LinkFragment : Fragment() {
+class AboutFragment : Fragment() {
     // TODO: Rename and change types of parameters
     private var param1: String? = null
     private var param2: String? = null
-
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -43,7 +41,7 @@ class LinkFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_link, container, false)
+        return inflater.inflate(R.layout.fragment_about, container, false)
     }
 
 
@@ -57,17 +55,6 @@ class LinkFragment : Fragment() {
         super.onDetach()
     }
 
-    /**
-     * This interface must be implemented by activities that contain this
-     * fragment to allow an interaction in this fragment to be communicated
-     * to the activity and potentially other fragments contained in that
-     * activity.
-     *
-     *
-     * See the Android Training lesson [Communicating with Other Fragments]
-     * (http://developer.android.com/training/basics/fragments/communicating.html)
-     * for more information.
-     */
 
 
     companion object {
@@ -77,12 +64,12 @@ class LinkFragment : Fragment() {
          *
          * @param param1 Parameter 1.
          * @param param2 Parameter 2.
-         * @return A new instance of fragment LinkFragment.
+         * @return A new instance of fragment AboutFragment.
          */
         // TODO: Rename and change types and number of parameters
         @JvmStatic
         fun newInstance(param1: String, param2: String) =
-            LinkFragment().apply {
+            AboutFragment().apply {
                 arguments = Bundle().apply {
                     putString(ARG_PARAM1, param1)
                     putString(ARG_PARAM2, param2)

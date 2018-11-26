@@ -16,7 +16,7 @@
             android:supportsRtl="true"
             android:theme="@style/AppTheme">
         <activity
-                android:name=".persenter.view.activity.MainActivity"
+                android:name="com.test.contactapp.persenter.view.ui.activity.MainActivity"
                 android:theme="@style/Theme.AppCompat.Light.NoActionBar.FullScreen">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
@@ -25,17 +25,17 @@
             </intent-filter>
         </activity>
         <activity
-                android:name=".persenter.view.activity.RegisterActivity"
+                android:name="com.test.contactapp.persenter.view.ui.activity.RegisterActivity"
                 android:label="@string/title_activity_register"
                 android:theme="@style/AppTheme.NoActionBar">
         </activity>
         <activity
-                android:name=".persenter.view.activity.LoginActivity"
+                android:name="com.test.contactapp.persenter.view.ui.activity.LoginActivity"
                 android:label="@string/title_activity_login"
                 android:theme="@style/AppTheme.NoActionBar">
         </activity>
         <activity
-                android:name=".persenter.view.activity.HomeActivity"
+                android:name="com.test.contactapp.persenter.view.ui.activity.HomeActivity"
                 android:label="@string/title_activity_home"
                 android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
@@ -50,12 +50,12 @@
                 android:resource="@array/preloaded_fonts"/>
 
         <activity
-                android:name=".persenter.view.activity.ContactDetailActivity"
+                android:name="com.test.contactapp.persenter.view.ui.activity.ContactDetailActivity"
                 android:label="@string/title_activity_contact_detail"
                 android:theme="@style/AppTheme.NoActionBar">
         </activity>
         <activity
-                android:name=".persenter.view.activity.CallLogActivity"
+                android:name="com.test.contactapp.persenter.view.ui.activity.CallLogActivity"
                 android:label="@string/title_activity_call_log"
                 android:theme="@style/AppTheme.NoActionBar">
         </activity>

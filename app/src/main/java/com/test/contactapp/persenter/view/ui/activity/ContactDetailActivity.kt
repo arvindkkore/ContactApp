@@ -1,4 +1,4 @@
-package com.test.contactapp.persenter.view.activity
+package com.test.contactapp.persenter.view.ui.activity
 
 import android.content.Context
 import android.os.Bundle
@@ -7,9 +7,9 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.FragmentPagerAdapter
 import com.test.contactapp.R
-import com.test.contactapp.persenter.view.fragments.AboutFragment
-import com.test.contactapp.persenter.view.fragments.LinkFragment
-import com.test.contactapp.persenter.view.fragments.NoteFragment
+import com.test.contactapp.persenter.view.ui.fragments.AboutFragment
+import com.test.contactapp.persenter.view.ui.fragments.LinkFragment
+import com.test.contactapp.persenter.view.ui.fragments.NoteFragment
 
 import kotlinx.android.synthetic.main.activity_contact_detail.*
 import kotlinx.android.synthetic.main.content_contact_detail.*

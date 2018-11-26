@@ -1,4 +1,4 @@
-package com.test.contactapp.persenter.view.activity
+package com.test.contactapp.persenter.view.ui.activity
 
 
 import android.app.SearchManager
@@ -22,9 +22,9 @@ import com.bumptech.glide.request.RequestOptions
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.google.firebase.auth.FirebaseAuth
 import com.test.contactapp.R
-import com.test.contactapp.persenter.view.fragments.CallFragmentNew
-import com.test.contactapp.persenter.view.fragments.ContactFragmentNew
-import com.test.contactapp.persenter.view.fragments.HomeFragment
+import com.test.contactapp.persenter.view.ui.fragments.CallFragmentNew
+import com.test.contactapp.persenter.view.ui.fragments.ContactFragmentNew
+import com.test.contactapp.persenter.view.ui.fragments.HomeFragment
 import kotlinx.android.synthetic.main.activity_home.*
 
 //https://guides.codepath.com/android/viewpager-with-fragmentpageradapter

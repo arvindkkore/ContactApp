@@ -10,7 +10,7 @@
         android:layout_height="match_parent"
         android:layout_marginLeft="10dp"
         android:layout_marginRight="10dp"
-        tools:context=".persenter.view.fragments.HomeFragment">
+        tools:context=".persenter.view.ui.fragments.HomeFragment">
 
     <LinearLayout
 

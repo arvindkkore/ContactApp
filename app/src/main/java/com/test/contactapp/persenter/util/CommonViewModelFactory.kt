@@ -7,11 +7,11 @@ import com.test.contactapp.persenter.view.viewmodel.CallLogViewModel
 import javax.inject.Inject
 
 @ActivityScope
-class CommonViewModelFactory @Inject constructor(val viewModel: ViewModel) : ViewModelProvider.Factory {
+class CommonViewModelFactory @Inject constructor(val viewModel: CallLogViewModel) : ViewModelProvider.Factory {
 
 
         override fun <T : ViewModel> create(modelClass: Class<T>): T {
-            return if (modelClass.isAssignableFrom(CallLogViewModel::class.java!!)) {
+            return if (modelClass.isAssignableFrom(CallLogViewModel::class.java)) {
                return  viewModel as T
             } else {
                 throw IllegalArgumentException("ViewModel Not Found")

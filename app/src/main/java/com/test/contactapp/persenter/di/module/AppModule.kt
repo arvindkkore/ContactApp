@@ -18,6 +18,8 @@ class AppModule(val app: ContactApp)
 
   @Provides
   @Singleton
-  fun provideRepository(context: Context): Repository  =   RepositoryImpl(context)
+  fun provideRepository(context: Context) : RepositoryImpl  {
+    return RepositoryImpl(context)
+  }
 
 }

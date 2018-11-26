@@ -1,4 +1,4 @@
-package com.test.contactapp.persenter.view.fragments
+package com.test.contactapp.persenter.view.ui.fragments
 
 import android.annotation.SuppressLint
 import android.database.Cursor
