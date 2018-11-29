@@ -7,6 +7,7 @@ import androidx.lifecycle.ViewModel
 import com.test.contactapp.data.models.CallModel
 import com.test.contactapp.domain.interactor.provider.ReadCallLog
 import com.test.contactapp.persenter.di.scope.ActivityScope
+import java.util.concurrent.TimeUnit
 import javax.inject.Inject
 
 

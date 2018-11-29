@@ -10,7 +10,7 @@
 
     <ListView
 
-            tools:listitem="@layout/item_call_log"
+            tools:listitem="@layout/item_call_log_homefragment"
             android:id="@+id/recycler_view_contact"
             android:layout_width="match_parent"
             android:layout_height="match_parent"/>

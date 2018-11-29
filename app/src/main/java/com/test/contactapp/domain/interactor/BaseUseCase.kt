@@ -8,8 +8,7 @@ abstract class BaseUseCase<PARAM,RESULT>
 {
     fun execute(param: PARAM): Single<RESULT> {
         return createUsesCase(param)
-            .subscribeOn(Schedulers.io())
-               .observeOn(AndroidSchedulers.mainThread())
+
     }
         abstract fun createUsesCase(param: PARAM?): Single<RESULT>
 

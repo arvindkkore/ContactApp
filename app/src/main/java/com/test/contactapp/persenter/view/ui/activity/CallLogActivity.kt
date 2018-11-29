@@ -2,6 +2,7 @@ package com.test.contactapp.persenter.view.ui.activity
 
 import android.os.Bundle
 import android.util.Log
+import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.ViewModelProviders
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -46,6 +47,7 @@ class CallLogActivity : AppCompatActivity() {
         recycler_view_calllog.layoutManager = LinearLayoutManager(this)
         adapter = CallLogAdapter(this, list)
         recycler_view_calllog.adapter = adapter
+        shimmer_view_container.startShimmer();
         setObserver()
         viewModel.loadCallLog()
     }
@@ -56,6 +58,8 @@ class CallLogActivity : AppCompatActivity() {
             list.clear()
             list.addAll(data)
             adapter.notifyDataSetChanged()
+            shimmer_view_container.stopShimmer()
+            shimmer_view_container.setVisibility(View.GONE)
         }
         )
     }

@@ -24,7 +24,7 @@ class ContactAdapter(val context: Context, val list: List<ContactDTO> ) : Recycl
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ContactAdapter.ViewHolder {
-        val view = LayoutInflater.from(parent.context).inflate(R.layout.item_call_log,parent,false)
+        val view = LayoutInflater.from(parent.context).inflate(R.layout.item_call_log_homefragment,parent,false)
         return ViewHolder(view = view)
     }
 

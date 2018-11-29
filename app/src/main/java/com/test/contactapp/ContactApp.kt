@@ -3,7 +3,6 @@ package com.test.contactapp
 import android.app.Application
 import android.content.Context
 import androidx.multidex.MultiDex
-import androidx.multidex.MultiDexApplication
 import com.test.contactapp.persenter.di.component.AppComponent
 import com.test.contactapp.persenter.di.component.DaggerAppComponent
 import com.test.contactapp.persenter.di.module.AppModule
@@ -18,6 +17,7 @@ class ContactApp : Application()
     override fun onCreate() {
         super.onCreate()
         component.inject(this)
+
     }
     override fun attachBaseContext(context: Context?) {
         super.attachBaseContext(context)
