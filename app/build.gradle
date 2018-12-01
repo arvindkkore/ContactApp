@@ -6,7 +6,7 @@ apply plugin: 'kotlin-android-extensions'
 
 apply plugin: "androidx.navigation.safeargs"
 apply plugin: 'kotlin-kapt'
-apply plugin: 'io.objectbox'
+
 
 def proj = rootProject.ext
 android {
@@ -88,7 +88,6 @@ dependencies {
     implementation "androidx.lifecycle:lifecycle-extensions:$lifecycle_version"
     kapt "androidx.lifecycle:lifecycle-compiler:$lifecycle_version" // use kapt for Kotlin
 
-
     // glide image library
     implementation 'com.github.bumptech.glide:glide:4.8.0'
     kapt 'com.github.bumptech.glide:compiler:4.8.0'
@@ -103,12 +102,17 @@ dependencies {
     implementation 'com.facebook.shimmer:shimmer:0.3.0'
     implementation 'com.wang.avi:library:2.1.3'
 
-    implementation "io.objectbox:objectbox-android:$objectbox_version"
+    //  implementation "io.objectbox:objectbox-android:$objectbox_version"
     implementation "io.objectbox:objectbox-kotlin:$objectbox_version"
+    implementation "io.objectbox:objectbox-rxjava:$objectbox_version"
     kapt "io.objectbox:objectbox-processor:$objectbox_version"
+    debugImplementation "io.objectbox:objectbox-android-objectbrowser:$objectbox_version"
+    releaseImplementation "io.objectbox:objectbox-android:$objectbox_version"
 
 }
 
+// apply the plugin after the dependencies block
+apply plugin: 'io.objectbox'
 apply plugin: 'com.google.gms.google-services'
 //com.google.gms.googleservices.GoogleServicesPlugin.config.disableVersionCheck = true
 

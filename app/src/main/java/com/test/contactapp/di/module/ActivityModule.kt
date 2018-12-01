@@ -1,4 +1,4 @@
-package com.test.contactapp.persenter.di.module
+package com.test.contactapp.di.module
 
 import dagger.Module
 

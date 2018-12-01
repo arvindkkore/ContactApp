@@ -21,6 +21,7 @@ class ContactDetailActivity : AppCompatActivity() {
 
     private lateinit var adapterViewPager: MyPagerAdapter
 
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_contact_detail)

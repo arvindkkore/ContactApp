@@ -1,4 +1,4 @@
-package com.test.contactapp.persenter.di.qualifier
+package com.test.contactapp.di.qualifier
 
 import javax.inject.Qualifier
 

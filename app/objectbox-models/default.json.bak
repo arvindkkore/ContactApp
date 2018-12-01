@@ -55,7 +55,24 @@
           "name": "note"
         }
       ],
-      "relations": []
+      "relations": [
+        {
+          "id": "1:4529085165779250530",
+          "name": "phones"
+        },
+        {
+          "id": "2:1148278910712868259",
+          "name": "addresses"
+        },
+        {
+          "id": "3:8806869840288887141",
+          "name": "emails"
+        },
+        {
+          "id": "4:8458534840137007611",
+          "name": "websites"
+        }
+      ]
     },
     {
       "id": "3:1493783130334596844",
@@ -135,11 +152,6 @@
   "retiredEntityUids": [],
   "retiredIndexUids": [],
   "retiredPropertyUids": [],
-  "retiredRelationUids": [
-    4529085165779250530,
-    1148278910712868259,
-    8806869840288887141,
-    8458534840137007611
-  ],
+  "retiredRelationUids": [],
   "version": 1
 }

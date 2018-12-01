@@ -7,16 +7,19 @@
     <uses-permission android:name="android.permission.WRITE_CALL_LOG"/>
     <uses-permission android:name="android.permission.READ_CONTACTS"/>
     <uses-permission android:name="android.permission.WRITE_CONTACTS"/>
+    <!-- Required to run keep-alive service when targeting API 28 or higher -->
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE"/>
 
     <application
             android:name=".ContactApp"
             android:allowBackup="true"
-            android:icon="@mipmap/add_contacts"
+            android:icon="@mipmap/ic_launcher"
             android:label="@string/app_name"
+            android:roundIcon="@mipmap/ic_launcher_round"
             android:supportsRtl="true"
             android:theme="@style/AppTheme">
         <activity
-                android:name="com.test.contactapp.persenter.view.ui.activity.MainActivity"
+                android:name=".persenter.view.ui.activity.MainActivity"
                 android:theme="@style/Theme.AppCompat.Light.NoActionBar.FullScreen">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
@@ -25,17 +28,17 @@
             </intent-filter>
         </activity>
         <activity
-                android:name="com.test.contactapp.persenter.view.ui.activity.RegisterActivity"
+                android:name=".persenter.view.ui.activity.RegisterActivity"
                 android:label="@string/title_activity_register"
                 android:theme="@style/AppTheme.NoActionBar">
         </activity>
         <activity
-                android:name="com.test.contactapp.persenter.view.ui.activity.LoginActivity"
+                android:name=".persenter.view.ui.activity.LoginActivity"
                 android:label="@string/title_activity_login"
                 android:theme="@style/AppTheme.NoActionBar">
         </activity>
         <activity
-                android:name="com.test.contactapp.persenter.view.ui.activity.HomeActivity"
+                android:name=".persenter.view.ui.activity.HomeActivity"
                 android:label="@string/title_activity_home"
                 android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
@@ -50,13 +53,18 @@
                 android:resource="@array/preloaded_fonts"/>
 
         <activity
-                android:name="com.test.contactapp.persenter.view.ui.activity.ContactDetailActivity"
+                android:name=".persenter.view.ui.activity.ContactDetailActivity"
                 android:label="@string/title_activity_contact_detail"
                 android:theme="@style/AppTheme.NoActionBar">
         </activity>
         <activity
-                android:name="com.test.contactapp.persenter.view.ui.activity.CallLogActivity"
+                android:name=".persenter.view.ui.activity.CallLogActivity"
                 android:label="@string/title_activity_call_log"
+                android:theme="@style/AppTheme.NoActionBar">
+        </activity>
+        <activity
+                android:name=".persenter.view.ui.activity.AddContactActivity"
+                android:label="@string/title_activity_add_contact"
                 android:theme="@style/AppTheme.NoActionBar">
         </activity>
     </application>

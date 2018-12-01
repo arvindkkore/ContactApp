@@ -1,6 +1,7 @@
 package com.test.contactapp.persenter.view.ui.fragments
 
 import android.content.Context
+import android.content.Intent
 import android.content.pm.PackageManager
 import android.database.Cursor
 import android.graphics.Bitmap
@@ -25,11 +26,14 @@ import com.test.contactapp.R
 import com.test.contactapp.persenter.adapter.CustomAdapter
 import com.test.contactapp.data.models.ContactDTO
 import com.test.contactapp.data.models.Contact_Model
+import com.test.contactapp.persenter.view.ui.activity.ContactDetailActivity
+
 import java.io.File
 import java.io.FileOutputStream
+import java.text.FieldPosition
 
 
-class ContactFragmentNew : Fragment() {
+class ContactFragmentNew : Fragment(), OnItemClick {
 
 
     lateinit var recyclerView: RecyclerView
@@ -49,7 +53,7 @@ class ContactFragmentNew : Fragment() {
         val view = inflater.inflate(R.layout.fragment_blank, container, false)
         recyclerView = view.findViewById(R.id.recycler_view_contact)
         recyclerView.layoutManager = LinearLayoutManager(activity)
-        adapter = CustomAdapter(this.activity as Context, list)
+        adapter = CustomAdapter(this.activity as Context, list,this)
         recyclerView.adapter = adapter
         return view
     }
@@ -71,7 +75,9 @@ class ContactFragmentNew : Fragment() {
 
     }
 
-
+    override fun onClick(position: Int){
+        Intent(activity,ContactDetailActivity::class.java).apply { startActivity(this) }
+    }
     companion object {
 
         val TAG = "ContactFragmentNew"
@@ -1445,4 +1451,8 @@ class ContactFragmentNew : Fragment() {
         return contactList
     }
 
+}
+
+interface OnItemClick{
+    fun onClick(position:Int)
 }

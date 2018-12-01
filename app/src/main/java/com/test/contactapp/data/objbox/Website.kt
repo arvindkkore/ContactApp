@@ -13,4 +13,5 @@ class Website
   var website :String =""
 
     lateinit var contact: ToOne<Contact>
+    lateinit var websiteType: ToOne<WebsiteTypeLookup>
 }

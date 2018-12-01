@@ -10,8 +10,8 @@ import com.test.contactapp.ContactApp
 import com.test.contactapp.R
 import com.test.contactapp.data.models.CallModel
 import com.test.contactapp.persenter.adapter.CallLogAdapter
-import com.test.contactapp.persenter.di.component.ActivityComponent
-import com.test.contactapp.persenter.di.component.DaggerActivityComponent
+import com.test.contactapp.di.component.ActivityComponent
+import com.test.contactapp.di.component.DaggerActivityComponent
 import com.test.contactapp.persenter.util.CommonViewModelFactory
 import com.test.contactapp.persenter.view.viewmodel.CallLogViewModel
 import kotlinx.android.synthetic.main.activity_call_log.*

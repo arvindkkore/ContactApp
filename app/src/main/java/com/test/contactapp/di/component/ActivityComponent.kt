@@ -1,7 +1,8 @@
-package com.test.contactapp.persenter.di.component
+package com.test.contactapp.di.component
 
-import com.test.contactapp.persenter.di.module.ActivityModule
-import com.test.contactapp.persenter.di.scope.ActivityScope
+import com.test.contactapp.di.module.ActivityModule
+import com.test.contactapp.di.scope.ActivityScope
+import com.test.contactapp.persenter.view.ui.activity.AddContactActivity
 import com.test.contactapp.persenter.view.ui.activity.CallLogActivity
 import dagger.Component
 
@@ -9,4 +10,5 @@ import dagger.Component
 @ActivityScope
 interface ActivityComponent {
    fun inject(callLogActivity: CallLogActivity)
+   fun inject(callLogActivity: AddContactActivity)
 }

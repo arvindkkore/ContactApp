@@ -1,4 +1,4 @@
-package com.test.contactapp.persenter.di.scope
+package com.test.contactapp.di.scope
 
 import java.lang.annotation.RetentionPolicy
 import javax.inject.Scope

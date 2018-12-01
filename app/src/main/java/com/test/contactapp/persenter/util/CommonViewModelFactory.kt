@@ -2,7 +2,7 @@ package com.test.contactapp.persenter.util
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
-import com.test.contactapp.persenter.di.scope.ActivityScope
+import com.test.contactapp.di.scope.ActivityScope
 import com.test.contactapp.persenter.view.viewmodel.CallLogViewModel
 import javax.inject.Inject
 

@@ -22,4 +22,5 @@
     <dimen name="placeholderImage">60dp</dimen>
     <dimen name="placeholderTextHeight">8dp</dimen>
     <dimen name="padding_10">10dp</dimen>
+    <string name="title_activity_add_contact">AddContactActivity</string>
 </resources>

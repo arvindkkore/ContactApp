@@ -10,4 +10,5 @@ class Email {
     var id: Long = 0
     var email_address: String = ""
     lateinit var contact: ToOne<Contact>
+    lateinit var emailType: ToOne<EmailTypeLookup>
 }

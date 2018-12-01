@@ -17,10 +17,11 @@ import com.bumptech.glide.request.RequestOptions
 import com.test.contactapp.R
 import com.test.contactapp.data.models.Contact_Model
 import com.test.contactapp.data.models.Phone
+import com.test.contactapp.persenter.view.ui.fragments.OnItemClick
 import kotlinx.android.extensions.LayoutContainer
 
 //http://www.androhub.com/android-read-contacts-using-content-provider/
-class CustomAdapter(internal var mContext: Context, private val list: MutableList<Contact_Model>) :
+class CustomAdapter(internal var mContext: Context, private val list: MutableList<Contact_Model>,val callback:OnItemClick? ) :
     RecyclerView.Adapter<CustomAdapter.ViewHolder>() {
 
 
@@ -70,6 +71,9 @@ class CustomAdapter(internal var mContext: Context, private val list: MutableLis
             showListPopupWindow(holder.imageViewIcon)
 
         }
+        holder.itemView.setOnClickListener { callback?.let {
+            it.onClick(position)
+        } }
     }
 
     override fun getItemCount(): Int {
