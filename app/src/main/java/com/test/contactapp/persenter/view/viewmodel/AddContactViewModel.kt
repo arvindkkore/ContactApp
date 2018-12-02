@@ -6,17 +6,23 @@ import android.content.Context
 import android.util.Log
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
-import com.test.contactapp.data.objbox.Contact
+import com.test.contactapp.data.objbox.*
 import com.test.contactapp.di.scope.ActivityScope
 import com.test.contactapp.domain.interactor.db.AddContact
 import com.test.contactapp.domain.interactor.db.GetContactFromDB
+import com.test.contactapp.domain.interactor.db.GetLookupData
 
 
 import javax.inject.Inject
 
 @ActivityScope
-class AddContactViewModel @Inject constructor(val context: Context, val addContact: AddContact,val getContactFromDB: GetContactFromDB) : ViewModel()
+class AddContactViewModel @Inject constructor(val context: Context, val addContact: AddContact,val getContactFromDB: GetContactFromDB,val getLookupData: GetLookupData) : ViewModel()
 {
+
+  lateinit var phoneTypeLookup:List<PhoneTypeLookup>
+    lateinit var emailTypeLookup:List<EmailTypeLookup>
+    lateinit var addressTypeLookup: List<AddressTypeLookup>
+    lateinit var dateTypeLookup:List<DateTypeLookup>
   init {
       Log.e(TAG,""+addContact)
   }
@@ -42,4 +48,15 @@ class AddContactViewModel @Inject constructor(val context: Context, val addConta
 
    },{})
   }
+
+    fun getLookupData()
+    {
+        getLookupData.execute(1).subscribe({lookupdata->
+            phoneTypeLookup=lookupdata.phoneLookup
+            emailTypeLookup=lookupdata.emaiLookup
+            addressTypeLookup=lookupdata.addressLookup
+            dateTypeLookup = lookupdata.dateLookup
+
+        },{error-> Log.e(TAG,"Error ${error.message}")})
+    }
 }

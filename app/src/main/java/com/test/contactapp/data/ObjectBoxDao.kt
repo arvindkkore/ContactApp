@@ -1,14 +1,11 @@
 package com.test.contactapp.data
 
 import android.util.Log
-import com.test.contactapp.data.objbox.Contact
-import com.test.contactapp.data.objbox.Contact_
+import com.test.contactapp.data.objbox.*
 import io.objectbox.BoxStore
-import io.objectbox.query.Query
 import io.objectbox.rx.RxQuery
 import io.reactivex.Single
 import java.lang.Exception
-import javax.inject.Inject
 
 
 class ObjectBoxDao (var boxStore: BoxStore)
@@ -60,7 +57,79 @@ class ObjectBoxDao (var boxStore: BoxStore)
         return contact;//contactBox.get(contactId!!)
     }
 
+    fun insertPhoneLookUp(phones: MutableList<PhoneTypeLookup>):Boolean {
+        try {
+            val phoneTypeBox = boxStore.boxFor(PhoneTypeLookup::class.java!!)
+            phoneTypeBox.put(phones)
+            return true
+        }catch (e:Exception)
+        {
+            return false
+        }
+    }
 
+    fun insertEmailLookup(emails: MutableList<EmailTypeLookup>):Boolean {
+        try {
+            val phoneTypeBox = boxStore.boxFor(EmailTypeLookup::class.java!!)
+            phoneTypeBox.put(emails)
+            return true
+        }catch (e:Exception)
+        {
+            return false
+        }
+    }
+
+    fun insertAddressLookup(addresses: MutableList<AddressTypeLookup>): Boolean {
+        try {
+            val addressTypeLookup = boxStore.boxFor(AddressTypeLookup::class.java!!)
+            addressTypeLookup.put(addresses)
+            return true
+        }catch (e:Exception)
+        {
+            return false
+        }
+    }
+
+    fun insertDateLookup(dates: MutableList<DateTypeLookup>):Boolean {
+        try {
+            val dateTypeLookup = boxStore.boxFor(DateTypeLookup::class.java!!)
+            dateTypeLookup.put(dates)
+            return true
+        }catch (e:Exception)
+        {
+            return false
+        }
+    }
+
+    fun getPhoneLookUp(): MutableList<PhoneTypeLookup> {
+
+
+        val contactBx = boxStore.boxFor(PhoneTypeLookup::class.java!!)
+        return contactBx.all
+    }
+
+    fun getEmailLookUp(): MutableList<EmailTypeLookup> {
+
+
+        val contactBx = boxStore.boxFor(EmailTypeLookup::class.java!!)
+        return contactBx.all
+    }
+
+    fun getAddressLookUp(): MutableList<AddressTypeLookup> {
+
+
+        val contactBx = boxStore.boxFor(AddressTypeLookup::class.java!!)
+        return contactBx.all
+    }
+
+    fun getDateLookUp(): MutableList<DateTypeLookup> {
+
+
+        val contactBx = boxStore.boxFor(DateTypeLookup::class.java!!)
+        return contactBx.all
+    }
+
+}
 
 
 }

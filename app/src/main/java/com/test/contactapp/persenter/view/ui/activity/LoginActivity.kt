@@ -6,6 +6,8 @@ import android.os.Bundle
 import android.util.Log
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import androidx.lifecycle.ViewModelProviders
+import com.cdnsol.demo.dsldemo.presenter.viewmodel.AddContactViewModel
 import com.google.android.gms.auth.api.signin.GoogleSignIn
 
 
@@ -17,22 +19,47 @@ import com.google.android.gms.auth.api.signin.GoogleSignInClient
 import com.google.android.gms.common.api.ApiException
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.GoogleAuthProvider
+import com.test.contactapp.ContactApp
 import com.test.contactapp.R
+import com.test.contactapp.di.component.ActivityComponent
+import com.test.contactapp.di.component.DaggerActivityComponent
+import com.test.contactapp.persenter.view.viewmodel.LoginViewModel
+import com.test.sampleroom.presenter.viewmodel.GlobalViewModelFactory
+import javax.inject.Inject
 
 
 class LoginActivity : AppCompatActivity() {
+
+
+    companion object {
+        val TAG ="LoginActivity"
+    }
+
+    val activityComponent: ActivityComponent by lazy {
+        DaggerActivityComponent.builder().appComponent((application as ContactApp).component).build()
+    }
+
+    @Inject
+    lateinit var factory: GlobalViewModelFactory<LoginViewModel>
+
+    var loginViewModel: LoginViewModel? = null
 
     private val RC_SIGN_IN = 123
 
     var mAuthListner: FirebaseAuth.AuthStateListener? = null
     private lateinit var googleSignInClient: GoogleSignInClient
-    companion object {
-        val TAG ="LoginActivity"
-    }
+
     lateinit var auth:FirebaseAuth
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)
+
+        activityComponent.inject(this)
+
+        loginViewModel = ViewModelProviders.of(this, factory).get(LoginViewModel::class.java)
+        //test.sayHello()
+        setObserver()
+
         setSupportActionBar(toolbar)
         auth =FirebaseAuth.getInstance();
 
@@ -46,9 +73,15 @@ class LoginActivity : AppCompatActivity() {
             .requestEmail()
             .build()
         googleSignInClient = GoogleSignIn.getClient(this, gso)
+        loginViewModel?.setLookupData()
     }
 
-  fun login(email:String ,password:String)
+    private fun setObserver() {
+
+
+    }
+
+    fun login(email:String ,password:String)
   {
       auth.signInWithEmailAndPassword(email, password)
           .addOnCompleteListener(this) { task ->

@@ -5,10 +5,4 @@ import io.objectbox.annotation.Id
 import io.objectbox.annotation.Unique
 
 @Entity
-class DateTypeLookup {
-
-    @Id
-    var id: Long = 0
-    @Unique
-    var dateType: String = ""
-}
+data class DateTypeLookup(@Id var id: Long=0,@Unique var dateType: String ="")

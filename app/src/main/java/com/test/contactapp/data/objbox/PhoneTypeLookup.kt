@@ -5,11 +5,4 @@ import io.objectbox.annotation.Id
 import io.objectbox.annotation.Unique
 
 @Entity
-class PhoneTypeLookup {
-
-    @Id
-    var id: Long = 0
-    @Unique
-    var phoneType: String = ""
-
-}
+data class PhoneTypeLookup(@Id var id: Long=0,@Unique var phoneType: String="")

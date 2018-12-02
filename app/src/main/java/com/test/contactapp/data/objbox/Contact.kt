@@ -5,6 +5,7 @@ import io.objectbox.annotation.Entity
 import io.objectbox.annotation.Id
 import io.objectbox.annotation.Unique
 import io.objectbox.relation.ToMany
+import io.objectbox.relation.ToOne
 
 
 @Entity
@@ -16,13 +17,13 @@ class Contact {
     var last_name: String = ""
     var nickname: String = ""
     var note: String = ""
-
     var companyName :String = ""
     var designation :String = ""
 
     //list of Phone numbers
     @Backlink
     lateinit var phones:ToMany<Phone>
+
 
     //list of address
     @Backlink

@@ -22,7 +22,7 @@ import javax.inject.Inject
 class AddContactActivity : AppCompatActivity() {
 
     companion object {
-        val TAG = "MainActivity"
+        val TAG = "AddContactActivity"
     }
 
     val activityComponent: ActivityComponent by lazy {
@@ -46,7 +46,7 @@ class AddContactActivity : AppCompatActivity() {
 
 
         fab.setOnClickListener {
-            val contact =Contact()
+           /* val contact =Contact()
             contact.first_name =edittext_name.text.toString()
             contact.last_name =edittext_lastname.text.toString()
             contact.note =edittext_note.text.toString()
@@ -68,7 +68,7 @@ class AddContactActivity : AppCompatActivity() {
             val email = Email();
             email.email_address=edittext_email.text.toString()
             contact.emails.add(email)
-            mainViewModel?.saveContact(contact)
+            mainViewModel?.saveContact(contact)*/
            // mainViewModel?.getContact()
         }
 

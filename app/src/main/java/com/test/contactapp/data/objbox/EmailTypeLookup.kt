@@ -5,10 +5,5 @@ import io.objectbox.annotation.Id
 import io.objectbox.annotation.Unique
 
 @Entity
-class EmailTypeLookup {
+data class EmailTypeLookup( @Id var id: Long,  @Unique var emailType: String="")
 
-    @Id
-    var id: Long = 0
-    @Unique
-    var  emailType: String = ""
-}

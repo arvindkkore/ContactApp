@@ -5,10 +5,4 @@ import io.objectbox.annotation.Id
 import io.objectbox.annotation.Unique
 
 @Entity
-class AddressTypeLookup
-{
-    @Id
-    var id: Long = 0
-    @Unique
-    var addressType: String = ""
-}
+data class AddressTypeLookup( @Id var id: Long = 0,  @Unique var addressType: String = "")
