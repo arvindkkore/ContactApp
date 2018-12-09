@@ -5,7 +5,6 @@ import io.objectbox.annotation.Entity
 import io.objectbox.annotation.Id
 import io.objectbox.annotation.Unique
 import io.objectbox.relation.ToMany
-import io.objectbox.relation.ToOne
 
 
 @Entity
@@ -16,6 +15,7 @@ class Contact {
     var first_name: String = ""
     var last_name: String = ""
     var nickname: String = ""
+
     var note: String = ""
     var companyName :String = ""
     var designation :String = ""

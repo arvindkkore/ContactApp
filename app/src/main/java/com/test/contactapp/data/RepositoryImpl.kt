@@ -13,6 +13,7 @@ import javax.inject.Singleton
 @Singleton
 public class RepositoryImpl @Inject constructor(val context: Context, val objectBoxDao: ObjectBoxDao) : Repository {
 
+
     override fun readCallLog(): Single<MutableList<CallModel>> {
         return Single.create<MutableList<CallModel>> { emitter ->
             emitter.onSuccess(fetchData(context))
@@ -118,14 +119,15 @@ public class RepositoryImpl @Inject constructor(val context: Context, val object
             val emailTypeLookup = objectBoxDao.getEmailLookUp()
             val addressTypeLookup = objectBoxDao.getAddressLookUp()
             val dateTypeLookup = objectBoxDao.getDateLookUp()
-            val lookupData = LookupData()
-            lookupData.phoneLookup = phoneLookup
-            lookupData.emaiLookup = emailTypeLookup
-            lookupData.addressLookup = addressTypeLookup
-            lookupData.dateLookup = dateTypeLookup
+            val lookupData = LookupData(phoneLookup,emailTypeLookup
+            , addressTypeLookup, dateTypeLookup)
             emitter.onSuccess(lookupData)
         }
 
     }
-
+    override fun readContacts(): Single<MutableList<Contact>> {
+     return Single.create<MutableList<Contact>>{emmiter->
+          emmiter.onSuccess(com.test.contactapp.data.util.readContacts(context))
+     }
+    }
 }

@@ -1,62 +1,117 @@
 <?xml version="1.0" encoding="utf-8"?>
+<layout   xmlns:android="http://schemas.android.com/apk/res/android"
+          xmlns:app="http://schemas.android.com/apk/res-auto"
+          xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="viewModel" type="com.test.contactapp.presenter.view.viewmodel.AddEditViewContactViewModel"/>
+    </data>
 <androidx.constraintlayout.widget.ConstraintLayout
-        xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools"
+
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".persenter.view.ui.fragments.LinkFragment">
+        tools:context=".presenter.view.ui.fragments.LinkFragment">
 
 
-    <TextView
-            android:fontFamily="@font/aclonica"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/textview_number"
-            android:text="9713151649" android:layout_marginTop="8dp"
-            app:layout_constraintTop_toTopOf="@+id/guideline17" app:layout_constraintStart_toEndOf="@+id/imageView7"
-            android:layout_marginLeft="8dp" android:layout_marginStart="8dp"/>
-    <TextView
-            android:fontFamily="@font/aclonica"
-            android:text="Mobile Number"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/textview_mob_type" app:layout_constraintStart_toEndOf="@+id/imageView7"
-            android:layout_marginLeft="8dp" android:layout_marginStart="8dp" android:layout_marginTop="8dp"
-            app:layout_constraintTop_toBottomOf="@+id/textview_number"/>
-    <TextView
-            android:fontFamily="@font/aclonica"
-            android:text="Personal"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/textview_personal"
-            app:layout_constraintTop_toTopOf="@+id/guideline17" app:layout_constraintStart_toEndOf="@+id/barrier_2"
-            app:layout_constraintEnd_toStartOf="@+id/guideline2"
-            app:layout_constraintHorizontal_bias="1.0"/>
     <androidx.constraintlayout.widget.Guideline android:layout_width="wrap_content" android:layout_height="wrap_content"
                                                 android:id="@+id/guideline1" app:layout_constraintGuide_begin="20dp"
                                                 android:orientation="vertical"/>
     <androidx.constraintlayout.widget.Guideline android:layout_width="wrap_content" android:layout_height="wrap_content"
-                                                android:id="@+id/guideline2" app:layout_constraintGuide_end="20dp"
-                                                android:orientation="vertical"/>
-    <TextView
-            android:fontFamily="@font/aclonica"
-            android:text="Mobile"
-            android:layout_width="wrap_content"
+                                                android:id="@+id/guideline2"
+                                                android:orientation="vertical"
+                                                app:layout_constraintGuide_end="20dp"/>
+    <RelativeLayout
+            android:id="@+id/layout1"
+            app:layout_constraintLeft_toRightOf="@id/guideline1"
+            app:layout_constraintRight_toLeftOf="@id/guideline2"
+            app:layout_constraintTop_toTopOf="@+id/guideline17"
+            android:layout_width="280dp"
             android:layout_height="wrap_content"
-            android:id="@+id/textview_type2"
-            app:layout_constraintEnd_toStartOf="@+id/guideline2" android:layout_marginTop="8dp"
-            app:layout_constraintTop_toBottomOf="@+id/textview_personal"/>
-    <TextView
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintHorizontal_bias="0.512">
+        <ImageView
+                android:background="@drawable/round_bg"
+                android:padding="4dp"
+                android:src="@drawable/ic_call_green"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:id="@+id/imageView7"
+        />
+        <EditText
+                android:background="@android:color/transparent"
+                app:fontFamily="serif"
+                android:textSize="14dp"
+                android:fontFamily="@font/aclonica"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/textview_number"
+                android:text="9713151649"
+                android:layout_toRightOf="@+id/imageView7"
+                android:layout_marginLeft="8dp"
+                android:layout_marginStart="8dp"
+                />
+        <EditText
+                android:background="@android:color/transparent"
+                app:fontFamily="serif"
+                android:textSize="14dp"
+                android:layout_below="@+id/textview_number"
+                android:layout_toRightOf="@+id/imageView7"
+                android:fontFamily="@font/aclonica"
+                android:text="Mobile Number"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+        />
+        <TextView
+                app:fontFamily="serif"
+                android:layout_marginRight="10dp"
+                android:layout_alignParentRight="true"
+                android:fontFamily="@font/aclonica"
+                android:text="Personal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/textview_personal"
+                app:layout_constraintHorizontal_bias="1.0"/>
+
+        <TextView
+                app:fontFamily="serif"
+                android:layout_marginRight="10dp"
+                android:layout_below="@+id/textview_personal"
+                android:layout_alignParentRight="true"
+                android:fontFamily="@font/aclonica"
+                android:text="Mobile"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/textview_type2"
+                android:layout_marginTop="8dp"
+                app:layout_constraintTop_toBottomOf="@+id/textview_personal"/>
+
+    </RelativeLayout>
+
+
+
+    <EditText
+            app:fontFamily="serif"
+            android:background="@android:color/transparent"
+            android:textSize="14dp"
             android:fontFamily="@font/aclonica"
             android:text="kore.arvind@gmail.com"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:id="@+id/textView9" app:layout_constraintEnd_toStartOf="@+id/guideline2"
-            app:layout_constraintStart_toEndOf="@+id/symbol_email" android:layout_marginLeft="8dp"
-            android:layout_marginStart="8dp" app:layout_constraintHorizontal_bias="0.0"
+            android:id="@+id/textView9"
+            app:layout_constraintTop_toBottomOf="@+id/layout1"
+            app:layout_constraintEnd_toStartOf="@+id/guideline2"
+            app:layout_constraintStart_toEndOf="@+id/symbol_email"
+            android:layout_marginLeft="8dp"
+            android:layout_marginStart="8dp"
             app:layout_constraintBottom_toBottomOf="@+id/symbol_email"
             app:layout_constraintTop_toTopOf="@+id/symbol_email"/>
-    <TextView
+    <EditText
+            app:fontFamily="serif"
+            android:background="@android:color/transparent"
+            android:textSize="14dp"
             android:fontFamily="@font/aclonica"
             android:text="www.google.com"
             android:layout_width="0dp"
@@ -66,7 +121,10 @@
             android:layout_marginStart="8dp"
             app:layout_constraintTop_toTopOf="@+id/symbol_web"
             app:layout_constraintBottom_toBottomOf="@+id/symbol_web"/>
-    <TextView
+    <EditText
+            app:fontFamily="serif"
+            android:background="@android:color/transparent"
+            android:textSize="14dp"
             android:fontFamily="@font/aclonica"
             android:text="Twitter Url"
             android:layout_width="0dp"
@@ -76,7 +134,10 @@
             android:layout_marginLeft="8dp" android:layout_marginStart="8dp"
             app:layout_constraintTop_toTopOf="@+id/symbol_twitter"
             app:layout_constraintBottom_toBottomOf="@+id/symbol_twitter"/>
-    <TextView
+    <EditText
+            app:fontFamily="serif"
+            android:background="@android:color/transparent"
+            android:textSize="14dp"
             android:fontFamily="@font/aclonica"
             android:text="Hint Text"
             android:layout_width="0dp"
@@ -89,16 +150,7 @@
     <androidx.constraintlayout.widget.Guideline android:layout_width="wrap_content" android:layout_height="wrap_content"
                                                 android:id="@+id/guideline17" app:layout_constraintGuide_begin="20dp"
                                                 android:orientation="horizontal"/>
-    <ImageView
-            android:background="@drawable/round_bg"
-            android:padding="4dp"
-            android:src="@drawable/ic_call_green"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:id="@+id/imageView7" android:layout_marginTop="8dp"
-            app:layout_constraintTop_toTopOf="@+id/guideline17"
-            app:layout_constraintStart_toStartOf="@+id/guideline1"
-    />
+
     <TextView
             android:fontFamily="@font/aclonica"
             android:textColor="@color/devider"
@@ -108,7 +160,7 @@
             android:gravity="center"
             android:background="@drawable/round_bg"
             android:id="@+id/symbol_email" android:layout_marginTop="20dp"
-            app:layout_constraintTop_toBottomOf="@+id/textview_mob_type"
+            app:layout_constraintTop_toBottomOf="@+id/layout1"
             app:layout_constraintStart_toStartOf="@+id/guideline1"/>
     <TextView
             android:layout_width="30dp"
@@ -150,15 +202,6 @@
             android:textSize="15sp" android:layout_marginTop="20dp"
             app:layout_constraintTop_toBottomOf="@+id/textView11"
     />
-    <androidx.constraintlayout.widget.Barrier android:layout_width="300dp" android:layout_height="wrap_content"
-                                              android:id="@+id/barrier_1" app:barrierDirection="right"
-                                              app:constraint_referenced_ids="textview_number,textview_mob_type"
-                                              android:visibility="visible"
-                                              tools:layout_editor_absoluteX="62dp"/>
 
-    <androidx.constraintlayout.widget.Barrier android:layout_width="0dp" android:layout_height="wrap_content"
-                                              android:id="@+id/barrier_2" app:barrierDirection="left"
-                                              app:constraint_referenced_ids="textview_personal,textview_type2"
-                                              app:layout_constraintEnd_toEndOf="parent"
-                                              tools:layout_editor_absoluteY="74dp"/>
 </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

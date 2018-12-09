@@ -5,7 +5,6 @@ import com.test.contactapp.data.objbox.*
 import io.objectbox.BoxStore
 import io.objectbox.rx.RxQuery
 import io.reactivex.Single
-import java.lang.Exception
 
 
 class ObjectBoxDao (var boxStore: BoxStore)
@@ -132,4 +131,3 @@ class ObjectBoxDao (var boxStore: BoxStore)
 }
 
 
-}

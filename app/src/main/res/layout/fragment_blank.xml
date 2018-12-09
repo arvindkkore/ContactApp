@@ -3,7 +3,7 @@
              xmlns:tools="http://schemas.android.com/tools"
              android:layout_width="match_parent"
              android:layout_height="match_parent"
-             tools:context=".persenter.view.ui.fragments.ContactFragmentNew">
+             tools:context=".presenter.view.ui.fragments.ContactFragmentNew">
 
 
     <!--<TextView

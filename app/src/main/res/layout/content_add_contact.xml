@@ -2,7 +2,7 @@
 <ScrollView
         app:layout_behavior="@string/appbar_scrolling_view_behavior"
         tools:showIn="@layout/activity_add_contact"
-        tools:context=".persenter.view.ui.activity.AddContactActivity"
+        tools:context=".presenter.view.ui.activity.AddContactActivity"
         xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:tools="http://schemas.android.com/tools"
         xmlns:app="http://schemas.android.com/apk/res-auto"

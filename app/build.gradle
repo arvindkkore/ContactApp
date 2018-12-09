@@ -1,9 +1,6 @@
 apply plugin: 'com.android.application'
-
 apply plugin: 'kotlin-android'
-
 apply plugin: 'kotlin-android-extensions'
-
 apply plugin: "androidx.navigation.safeargs"
 apply plugin: 'kotlin-kapt'
 
@@ -26,6 +23,10 @@ android {
                 arg("objectbox.debug", true)
             }
         }
+
+    }
+    dataBinding {
+        enabled = true
     }
     buildTypes {
         release {
@@ -108,11 +109,14 @@ dependencies {
     kapt "io.objectbox:objectbox-processor:$objectbox_version"
     debugImplementation "io.objectbox:objectbox-android-objectbrowser:$objectbox_version"
     releaseImplementation "io.objectbox:objectbox-android:$objectbox_version"
+ //   kapt "com.android.databinding:compiler:$androidPluginVersion"
+    kapt "com.android.databinding:compiler:3.0.0-beta6"
 
 }
 
 // apply the plugin after the dependencies block
 apply plugin: 'io.objectbox'
+
 apply plugin: 'com.google.gms.google-services'
 //com.google.gms.googleservices.GoogleServicesPlugin.config.disableVersionCheck = true
 

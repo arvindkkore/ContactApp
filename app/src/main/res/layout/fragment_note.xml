@@ -1,10 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-                                                   xmlns:app="http://schemas.android.com/apk/res-auto"
-                                                   xmlns:tools="http://schemas.android.com/tools"
+<layout  xmlns:android="http://schemas.android.com/apk/res/android"
+         xmlns:app="http://schemas.android.com/apk/res-auto"
+         xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="viewModel" type="com.test.contactapp.presenter.view.viewmodel.AddEditViewContactViewModel"/>
+    </data>
+
+<androidx.constraintlayout.widget.ConstraintLayout
                                                    android:layout_width="match_parent"
                                                    android:layout_height="match_parent"
-                                                   tools:context=".persenter.view.ui.fragments.NoteFragment">
+                                                   tools:context=".presenter.view.ui.fragments.NoteFragment">
 
 
     <androidx.constraintlayout.widget.Guideline android:layout_width="wrap_content" android:layout_height="wrap_content"
@@ -23,7 +28,6 @@
             android:id="@+id/personinfo_heading"
             android:layout_height="wrap_content"
             app:layout_constraintStart_toStartOf="@id/guideline1"
-
             android:layout_marginTop="16dp"
             app:layout_constraintTop_toTopOf="parent"
             android:layout_marginEnd="8dp"
@@ -32,10 +36,12 @@
             app:layout_constraintHorizontal_bias="0.031"/>
 
 
-    <TextView
+    <EditText
+            android:background="@android:color/transparent"
             android:fontFamily="@font/alegreya_sans_sc_thin"
             android:text="Lorem ipsum is a pseudo-Latin text used in web design, typography, layout, and printing in place of English to emphasise design elements over content. It's also called placeholder (or filler) text. It's a convenient tool for mock-ups. It helps to outline the visual elements of a document or presentation, eg typography, font, or layout. Lorem ipsum is mostly a part of a Latin text by the classical author and philosopher Cicero. Its words and letters have"
             android:layout_width="0dp"
+            android:textSize="14dp"
             android:id="@+id/textview_note"
             android:layout_height="wrap_content"
             app:layout_constraintStart_toStartOf="@+id/guideline1"
@@ -43,7 +49,8 @@
             android:layout_marginTop="16dp"
             app:layout_constraintEnd_toEndOf="@id/guideline2"
 
-            app:fontFamily="@font/adamina" app:layout_constraintHorizontal_bias="1.0"/>
+            app:fontFamily="serif" app:layout_constraintHorizontal_bias="1.0"/>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

@@ -8,7 +8,7 @@
         xmlns:shimmer="http://schemas.android.com/apk/res-auto"
         app:layout_behavior="@string/appbar_scrolling_view_behavior"
         tools:showIn="@layout/activity_call_log"
-        tools:context=".persenter.view.ui.activity.CallLogActivity">
+        tools:context=".presenter.view.ui.activity.CallLogActivity">
     <com.facebook.shimmer.ShimmerFrameLayout
             android:id="@+id/shimmer_view_container"
             android:layout_width="wrap_content"

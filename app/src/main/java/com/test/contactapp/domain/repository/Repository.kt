@@ -4,7 +4,6 @@ import com.test.contactapp.data.models.CallModel
 import com.test.contactapp.data.models.LookupData
 import com.test.contactapp.data.objbox.Contact
 import io.reactivex.Single
-import javax.inject.Singleton
 
 
 public interface Repository
@@ -16,4 +15,5 @@ public interface Repository
   fun addContacts(contacts: MutableList<Contact>): Single<Boolean>
     fun prepareLookData(): Single<Boolean>
   fun getLookupData(): Single<LookupData>
+  fun readContacts(): Single<MutableList<Contact>>
 }

@@ -5,7 +5,7 @@
   "entities": [
     {
       "id": "1:7907511679226931016",
-      "lastPropertyId": "4:3316735202813457306",
+      "lastPropertyId": "5:5083080844752241165",
       "name": "Address",
       "properties": [
         {
@@ -24,13 +24,18 @@
           "id": "4:3316735202813457306",
           "indexId": "1:7574026089532560505",
           "name": "contactId"
+        },
+        {
+          "id": "5:5083080844752241165",
+          "indexId": "7:4775433715703851417",
+          "name": "addressTypeId"
         }
       ],
       "relations": []
     },
     {
       "id": "2:1342670673079843847",
-      "lastPropertyId": "5:7682968156964144596",
+      "lastPropertyId": "7:5110179415973767300",
       "name": "Contact",
       "properties": [
         {
@@ -53,13 +58,21 @@
         {
           "id": "5:7682968156964144596",
           "name": "note"
+        },
+        {
+          "id": "6:563322982383121668",
+          "name": "companyName"
+        },
+        {
+          "id": "7:5110179415973767300",
+          "name": "designation"
         }
       ],
       "relations": []
     },
     {
       "id": "3:1493783130334596844",
-      "lastPropertyId": "3:2994723397439879743",
+      "lastPropertyId": "4:7550568526361857260",
       "name": "Email",
       "properties": [
         {
@@ -74,13 +87,18 @@
           "id": "3:2994723397439879743",
           "indexId": "2:558968901949668627",
           "name": "contactId"
+        },
+        {
+          "id": "4:7550568526361857260",
+          "indexId": "12:1246649466180392602",
+          "name": "emailTypeId"
         }
       ],
       "relations": []
     },
     {
       "id": "4:7366475665051676820",
-      "lastPropertyId": "4:9115904010248039521",
+      "lastPropertyId": "5:8482231181378529789",
       "name": "Phone",
       "properties": [
         {
@@ -93,20 +111,21 @@
           "name": "phone_number"
         },
         {
-          "id": "3:302175918944032730",
-          "name": "phone_type"
-        },
-        {
           "id": "4:9115904010248039521",
           "indexId": "3:1643625158858588855",
           "name": "contactId"
+        },
+        {
+          "id": "5:8482231181378529789",
+          "indexId": "14:9171505583811580666",
+          "name": "phone_typeId"
         }
       ],
       "relations": []
     },
     {
       "id": "5:7506499420848687470",
-      "lastPropertyId": "3:5398415716659796211",
+      "lastPropertyId": "4:8527012133424388524",
       "name": "Website",
       "properties": [
         {
@@ -121,20 +140,138 @@
           "id": "3:5398415716659796211",
           "indexId": "4:5333424947907160876",
           "name": "contactId"
+        },
+        {
+          "id": "4:8527012133424388524",
+          "indexId": "16:1243218183939043031",
+          "name": "websiteTypeId"
+        }
+      ],
+      "relations": []
+    },
+    {
+      "id": "6:6058281193108718150",
+      "lastPropertyId": "2:6946267487228730078",
+      "name": "AddressTypeLookup",
+      "properties": [
+        {
+          "id": "1:1320625819309696586",
+          "name": "id"
+        },
+        {
+          "id": "2:6946267487228730078",
+          "indexId": "8:2937420670032704182",
+          "name": "addressType"
+        }
+      ],
+      "relations": []
+    },
+    {
+      "id": "7:8205520811581459328",
+      "lastPropertyId": "4:8798694055213583997",
+      "name": "Date",
+      "properties": [
+        {
+          "id": "1:4608005113621056285",
+          "name": "id"
+        },
+        {
+          "id": "2:6192359025975138455",
+          "name": "date"
+        },
+        {
+          "id": "3:2575870110433315897",
+          "indexId": "9:8385986956511330794",
+          "name": "dateTypeId"
+        },
+        {
+          "id": "4:8798694055213583997",
+          "indexId": "10:8468876390845726216",
+          "name": "contactId"
+        }
+      ],
+      "relations": []
+    },
+    {
+      "id": "8:3530402629671238148",
+      "lastPropertyId": "2:1354144872620607615",
+      "name": "DateTypeLookup",
+      "properties": [
+        {
+          "id": "1:5847487781624210940",
+          "name": "id"
+        },
+        {
+          "id": "2:1354144872620607615",
+          "indexId": "11:872123520280475361",
+          "name": "dateType"
+        }
+      ],
+      "relations": []
+    },
+    {
+      "id": "9:6567011739871010377",
+      "lastPropertyId": "2:6177652915992610209",
+      "name": "EmailTypeLookup",
+      "properties": [
+        {
+          "id": "1:8319828286571706879",
+          "name": "id"
+        },
+        {
+          "id": "2:6177652915992610209",
+          "indexId": "13:3291158996767767877",
+          "name": "emailType"
+        }
+      ],
+      "relations": []
+    },
+    {
+      "id": "10:6281753943980561131",
+      "lastPropertyId": "2:1119752637557606524",
+      "name": "PhoneTypeLookup",
+      "properties": [
+        {
+          "id": "1:1790060495412495964",
+          "name": "id"
+        },
+        {
+          "id": "2:1119752637557606524",
+          "indexId": "15:5713061223013106325",
+          "name": "phoneType"
+        }
+      ],
+      "relations": []
+    },
+    {
+      "id": "11:7240404026998982104",
+      "lastPropertyId": "2:3596646958298704390",
+      "name": "WebsiteTypeLookup",
+      "properties": [
+        {
+          "id": "1:3277327781960345671",
+          "name": "id"
+        },
+        {
+          "id": "2:3596646958298704390",
+          "indexId": "17:7668330537969510725",
+          "name": "websiteType"
         }
       ],
       "relations": []
     }
   ],
-  "lastEntityId": "5:7506499420848687470",
-  "lastIndexId": "6:2797029060662390116",
+  "lastEntityId": "11:7240404026998982104",
+  "lastIndexId": "17:7668330537969510725",
   "lastRelationId": "4:8458534840137007611",
   "lastSequenceId": "0:0",
   "modelVersion": 4,
   "modelVersionParserMinimum": 4,
   "retiredEntityUids": [],
   "retiredIndexUids": [],
-  "retiredPropertyUids": [],
+  "retiredPropertyUids": [
+    302175918944032730
+  ],
   "retiredRelationUids": [
     4529085165779250530,
     1148278910712868259,

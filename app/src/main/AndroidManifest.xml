@@ -19,26 +19,25 @@
             android:supportsRtl="true"
             android:theme="@style/AppTheme">
         <activity
-                android:name=".persenter.view.ui.activity.MainActivity"
-                android:theme="@style/Theme.AppCompat.Light.NoActionBar.FullScreen">
+                android:name=".presenter.view.ui.activity.MainActivity"
+                android:theme="@style/AppTheme.Launcher">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
-
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
         <activity
-                android:name=".persenter.view.ui.activity.RegisterActivity"
+                android:name=".presenter.view.ui.activity.RegisterActivity"
                 android:label="@string/title_activity_register"
                 android:theme="@style/AppTheme.NoActionBar">
         </activity>
         <activity
-                android:name=".persenter.view.ui.activity.LoginActivity"
+                android:name=".presenter.view.ui.activity.LoginActivity"
                 android:label="@string/title_activity_login"
                 android:theme="@style/AppTheme.NoActionBar">
         </activity>
         <activity
-                android:name=".persenter.view.ui.activity.HomeActivity"
+                android:name=".presenter.view.ui.activity.HomeActivity"
                 android:label="@string/title_activity_home"
                 android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
@@ -53,17 +52,17 @@
                 android:resource="@array/preloaded_fonts"/>
 
         <activity
-                android:name=".persenter.view.ui.activity.ContactDetailActivity"
+                android:name=".presenter.view.ui.activity.ContactDetailActivity"
                 android:label="@string/title_activity_contact_detail"
                 android:theme="@style/AppTheme.NoActionBar">
         </activity>
         <activity
-                android:name=".persenter.view.ui.activity.CallLogActivity"
+                android:name=".presenter.view.ui.activity.CallLogActivity"
                 android:label="@string/title_activity_call_log"
                 android:theme="@style/AppTheme.NoActionBar">
         </activity>
         <activity
-                android:name=".persenter.view.ui.activity.AddContactActivity"
+                android:name=".presenter.view.ui.activity.AddContactActivity"
                 android:label="@string/title_activity_add_contact"
                 android:theme="@style/AppTheme.NoActionBar">
         </activity>

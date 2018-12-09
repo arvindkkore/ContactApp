@@ -4,7 +4,7 @@
         xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        tools:context=".persenter.view.ui.activity.MainActivity"
+        tools:context=".presenter.view.ui.activity.MainActivity"
         android:padding="5dp">
 
 

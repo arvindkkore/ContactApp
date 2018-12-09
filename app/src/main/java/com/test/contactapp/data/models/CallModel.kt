@@ -11,5 +11,9 @@ class CallModel
     var callDate :String= "";
     var callDayTime:Date? =null
 
+    var photo:String? =null
+    override fun toString(): String {
+        return "type ${type} number ${contactNumber} name ${contactName} photo ${photo}"
+    }
 
 }
